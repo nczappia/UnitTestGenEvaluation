@@ -1,7 +1,7 @@
-"deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" working https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
-"codellama/CodeLlama-13b-Instruct-hf" no access https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf
-"bigcode/santacoder" loads with no attention dropout, fails at generation https://huggingface.co/bigcode/santacoder
-"Salesforce/instructcodet5p-16b" https://huggingface.co/Salesforce/instructcodet5p-16b?library=transformers
-"Salesforce/codegen25-7b-instruct_P" https://huggingface.co/Salesforce/codegen25-7b-instruct_P
-"WizardLMTeam/WizardCoder-15B-V1.0" https://huggingface.co/WizardLMTeam/WizardCoder-15B-V1.0
-"bigcode/starcoder2-15b-instruct-v0.1" https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1
+"deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" completely successful https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
+"codellama/CodeLlama-13b-Instruct-hf" loads successfully https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf
+"bigcode/santacoder" loads successfullywith no attention dropout, fails at generation https://huggingface.co/bigcode/santacoder
+"Salesforce/instructcodet5p-16b" loads successfully https://huggingface.co/Salesforce/instructcodet5p-16b?library=transformers
+"Salesforce/codegen25-7b-instruct_P" fails loading (add_special_tokens conflict) https://huggingface.co/Salesforce/codegen25-7b-instruct_P
+"WizardLMTeam/WizardCoder-15B-V1.0" appears to be loading well https://huggingface.co/WizardLMTeam/WizardCoder-15B-V1.0
+"bigcode/starcoder2-15b-instruct-v0.1" will be tested for loading soon https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1
