@@ -1,200 +1,125 @@
 import argparse
-import multiprocessing
+import logging
 import os
-
+import pandas as pd
+import time
 import torch
-import transformers
-from accelerate import PartialState
-from datasets import load_dataset
-from peft import LoraConfig
-from transformers import (
-    AutoModelForCausalLM,
-    BitsAndBytesConfig,
-    logging,
-    set_seed,
-)
-from trl import SFTTrainer
 
-# Command: accelerate launch finetune.py         --model_id "deepseek-ai/deepseek-coder-6.7b-instruct"         --dataset_name "iamtarun/code_instructions_120k_alpaca"         --subset "data/train-00000-of-00001-d9b93805488c263e.parquet"         --dataset_text_field "output"         --split "train"         --max_seq_length 512         --max_steps 10000         --micro_batch_size 2         --gradient_accumulation_steps 8         --learning_rate 2e-5         --warmup_steps 20         --num_proc "$(nproc)"
 
+from transformers import BitsAndBytesConfig, AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM, pipeline
+from datasets import Dataset, load_dataset
 
 
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_id", type=str, default="deepseek-ai/deepseek-coder-6.7b-instruct")
-    parser.add_argument("--dataset_name", type=str, default="code_instructions_120k_alpaca")
-    parser.add_argument("--subset", type=str, default="data/train-00000-of-00001-d9b93805488c263e.parquet")
-    parser.add_argument("--split", type=str, default="train")
-    parser.add_argument("--dataset_text_field", type=str, default="output")
-
-    parser.add_argument("--max_seq_length", type=int, default=512)
-    parser.add_argument("--max_steps", type=int, default=10000)
-    parser.add_argument("--micro_batch_size", type=int, default=2)
-    parser.add_argument("--gradient_accumulation_steps", type=int, default=8)
-    parser.add_argument("--weight_decay", type=float, default=0.01)
-    parser.add_argument("--bf16", type=bool, default=True)
-
-    parser.add_argument("--attention_dropout", type=float, default=0.1)
-    parser.add_argument("--learning_rate", type=float, default=2e-5)
-    parser.add_argument("--lr_scheduler_type", type=str, default="cosine")
-    parser.add_argument("--warmup_steps", type=int, default=100)
-    parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--output_dir", type=str, default="finetune_starcoder2")
-    parser.add_argument("--num_proc", type=int, default=None)
-    parser.add_argument("--push_to_hub", type=bool, default=True)
-    parser.add_argument("--main_process_port", type=int, default=0)
+    parser.add_argument("--dataset_location", type=str, default = "../../data/prompts/shuffled_prompts.csv")
+    parser.add_argument("--hf_dataset_name", type=str, default = None)
+    parser.add_argument("--hf_dataset_subset", type=str, default=None)
+    parser.add_argument("--prompt_column", type=str, default = "prompt")
+    parser.add_argument("--batch_size", type=int, default = 16)
+    parser.add_argument("--prompt_output_dir", type=str, default="../../data/results")
+    parser.add_argument("--max_length", type=int, default = 1000)
     return parser.parse_args()
 
-
-def print_trainable_parameters(model):
-    """
-    Prints the number of trainable parameters in the model.
-    """
-    trainable_params = 0
-    all_param = 0
-    for _, param in model.named_parameters():
-        all_param += param.numel()
-        if param.requires_grad:
-            trainable_params += param.numel()
-    print(
-        f"trainable params: {trainable_params} || all params: {all_param} || trainable%: {100 * trainable_params / all_param}"
-    )
+def save_responses(df):
+    return 0
 
 
 def main(args):
+    print("Creatign BAB config")
     # config
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_quant_type="nf4",
         bnb_4bit_compute_dtype=torch.bfloat16,
     )
-    lora_config = LoraConfig(
-        r=8,
-        target_modules=[
-            "q_proj",
-            "o_proj",
-            "k_proj",
-            "v_proj",
-            "gate_proj",
-            "up_proj",
-            "down_proj",
-        ],
-        task_type="CAUSAL_LM",
-    )
 
-    # load model and dataset
-    token = os.environ.get("HF_TOKEN", None)
-    # print out selected device
-    print(PartialState().process_index)
+    print("Loading Tokenizer")
+    tokenizer = AutoTokenizer.from_pretrained(args.model_id)
 
-    #Check for GPU availability
-    print(torch.cuda.is_available())
-    if torch.cuda.is_available():
-        print("GPU")
-        device = torch.device("cuda:0")
-
-        model = AutoModelForCausalLM.from_pretrained(
+    print("Loading Model")
+    if (args.model_id == "Salesforce/codet5-base"):
+        print("Seq2Seq Model")
+        model = AutoModelForSeq2SeqLM.from_pretrained(
             args.model_id,
             quantization_config=bnb_config,
-            attention_dropout=args.attention_dropout,
+            trust_remote_code=True,
+            low_cpu_mem_usage=True,
         )
     else:
-        #Handle no GPU availiability
-        print("No GPU")
-        device = torch.device("cpu")
+        print("CausalLM Model")
         model = AutoModelForCausalLM.from_pretrained(
             args.model_id,
             quantization_config=bnb_config,
-            attention_dropout=args.attention_dropout,
+            trust_remote_code=True,
+            low_cpu_mem_usage=True,
+        )
+
+    print("Creating Pipeline")
+    if (args.model_id == "Salesforce/codet5-base"):
+        text_generator = pipeline(
+            "text2text-generation",
+            model=model,
+            tokenizer=tokenizer  
+        )
+    else:
+        text_generator = pipeline(
+            "text-generation",
+            model=model,
+            tokenizer=tokenizer
         )
     
-    if torch.cuda.device_count() > 1:
-        print("Using DataParallel for multiple GPUs")
-        model = torch.nn.DataParallel(model)
-
-    
-    model.to(device)
-
-    # Freeze all except embeddings and first layer
-    for name, param in model.named_parameters():
-        if "model.embed_tokens" not in name and "model.layers.0" not in name:
-            param.requires_grad = False
+    #Load hf-hosted dataset
+    if(args.hf_dataset_name is not None):
+        if(args.hf_dataset_subset is not None):
+            ds = load_dataset(args.hf_dataset_name, args.hf_dataset_subset)
         else:
-            param.requries_grad = True
-
-    print_trainable_parameters(model)
-
-    print("Model loaded and set")
-
-    print("Starting Dataset")
-
-    print(args.dataset_name)
-    print(args.subset)
-    print(args.split)
-    print(token)
-    print(args.num_proc if args.num_proc else multiprocessing.cpu_count())
+            ds = load_dataset(args.hf_dataset_name)
+    else:
+        ds = Dataset.from_csv(args.dataset_location)
     
-    '''Original file from hugging face hub
-    data = load_dataset(
-        args.dataset_name,
-        data_files=args.subset,
-        split=args.split,
-        token=token,
-        num_proc=args.num_proc if args.num_proc else multiprocessing.cpu_count(),
-    )'''
+    start_time = time.time()
 
-    data = load_dataset(
-        'parquet', 
-        data_files=args.subset, 
-        split=args.split,
-        num_proc=args.num_proc if args.num_proc else multiprocessing.cpu_count(),
+    def generate_text(batch, text_generator=None):
+        prompts = batch["prompt"]
+        outputs = text_generator(batch["prompt"])
+        # If the pipeline returns a list of dict, handle that
+        generated_texts = [o[0]["generated_text"] for o in outputs]
+        return {"generated_text": generated_texts}
+
+    generated_dataset = ds.map(generate_text, 
+                                    fn_kwargs= {"text_generator": text_generator}, 
+                                    desc="Processing dataset", 
+                                    batched=True, 
+                                    batch_size=args.batch_size,
+                                    #num_proc=4,
     )
 
-    print('Dataset type: ', type(data))
+    # End timing
+    end_time = time.time()
+    total_time = end_time - start_time
 
-    # setup the trainer
-    trainer = SFTTrainer(
-        model=model,
-        train_dataset=data,
-        max_seq_length=args.max_seq_length,
-        args=transformers.TrainingArguments(
-            per_device_train_batch_size=args.micro_batch_size,
-            gradient_accumulation_steps=args.gradient_accumulation_steps,
-            warmup_steps=args.warmup_steps,
-            max_steps=args.max_steps,
-            learning_rate=args.learning_rate,
-            lr_scheduler_type=args.lr_scheduler_type,
-            weight_decay=args.weight_decay,
-            bf16=args.bf16,
-            logging_strategy="steps",
-            logging_steps=10,
-            output_dir=args.output_dir,
-            optim="paged_adamw_8bit",
-            seed=args.seed,
-            run_name=f"train-{args.model_id.split('/')[-1]}",
-            report_to="wandb",
-        ),
-        peft_config=lora_config,
-        dataset_text_field=args.dataset_text_field,
-    )
+    model_name = args.model_id.split('/')[1]
 
-    # launch
-    print("Training...")
-    trainer.train()
+    response_dir = f"{args.prompt_output_dir}/{model_name}"
 
-    print("Saving the last checkpoint of the model")
-    model.save_pretrained(os.path.join(args.output_dir, args.model_id + "_" + args.subset + "_final_checkpoint/"))
-    '''if args.push_to_hub:
-        trainer.push_to_hub("Upload model", token=os.getenv("HUGGINGFACE_TOKEN")'''
-    print("Training Done! 💥")
+    os.mkdir(response_dir)
 
+    output_file = f"{response_dir}/responses.csv"
+
+    df = generated_dataset.to_pandas()
+    df.to_csv(output_file, index=False)
+
+    # Save timing info
+    with open(args.prompt_output_dir + "timing.txt", "a") as f:
+        f.write(f"Total generation time (seconds) for {args.model_id}: {total_time}\n")
+
+    print(f"Saved responses to {output_file}.")
+    print(f"Total time: {total_time:.2f} seconds")
 
 if __name__ == "__main__":
     args = get_args()
-    set_seed(args.seed)
-    os.makedirs(args.output_dir, exist_ok=True)
-
-    logging.set_verbosity_error()
 
     main(args)

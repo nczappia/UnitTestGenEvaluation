@@ -28,15 +28,7 @@ public static void write(JModel jm, File outdir, String methodnamePrefix) throws
         write(jm, outdir, TEMPLATE_CLASS, methodnamePrefix);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void write(JModel jm, File outdir, String methodnamePrefix) throws IOException {
-        write(jm, outdir, TEMPLATE_CLASS, methodnamePrefix);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's how you can write a full test class with test cases to validate the `"
+Write a full test class with test cases to validate the method defined above.",thethetest casesthetest casesthetest casesthe
 "@Override
 	public void removeAll(Iterator<? extends Statement> iterator) throws ModelRuntimeException {
 		if (this.isLocked()) {
@@ -127,42 +119,7 @@ Here's how you can write a full test class with test cases to validate the `"
 		}
 	}
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-	public void removeAll(Iterator<? extends Statement> iterator) throws ModelRuntimeException {
-		if (this.isLocked()) {
-			throw new ModelRuntimeException(""Model is locked, cannot perform an update."");
-		}
-		// do not auto-commit
-		assertModel();
-		try {
-			ensureTransaction();
-			try {
-				try {
-					// remove all
-					while (iterator.hasNext()) {
-						org.eclipse.rdf4j.model.Statement s = ConversionUtil.toRDF4J(iterator.next(),
-								this.valueFactory);
-						this.connection.remove(s, this.rdf4jContext);
-					}
-					ensureAutoCommitted();
-				} catch (RepositoryException x) {
-					this.connection.rollback();
-				}
-			} finally {
-				ensureAutoCommitted();
-			}
-		} catch (RepositoryException x) {
-			throw new ModelRuntimeException(x);
-		}
-	}
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.eclipse.rdf4"
+Write a full test class with test cases to validate the method defined above.",{{{{{}{{}
 "@Override
 	public void removeAll(Iterator<? extends Statement> iterator) throws ModelRuntimeException {
 		if(this.isLocked()) {
@@ -253,41 +210,7 @@ import org.eclipse.rdf4"
 		}
 	}
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-	public void removeAll(Iterator<? extends Statement> iterator) throws ModelRuntimeException {
-		if(this.isLocked()) {
-			throw new ModelRuntimeException(""Model is locked, cannot perform an update."");
-		}
-		// do not auto-commit
-		assertModel();
-		try {
-			this.connection.begin();
-			try {
-				try {
-					// remove all
-					while(iterator.hasNext()) {
-						org.openrdf.model.Statement s = ConversionUtil.toOpenRDF(iterator.next(),
-						        this.valueFactory);
-						this.connection.remove(s, this.openRdfContext);
-					}
-					this.connection.commit();
-				} catch(RepositoryException x) {
-					this.connection.rollback();
-				}
-			} finally {
-				this.connection.commit();
-			}
-		} catch(RepositoryException x) {
-			throw new ModelRuntimeException(x);
-		}
-	}
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that validates the `removeAll` method:
-"
+Write a full test class with test cases to validate the method defined above.",{{{{{}{{}
 "public static boolean hasSuperClass(Class<?> classA, Class<?> classB) {
 		// end recursion
 		if (classA.equals(classB))
@@ -373,46 +296,7 @@ public static boolean hasSuperClass(Class<?> classA, Class<?> classB) {
 
 	}
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static boolean hasSuperClass(Class<?> classA, Class<?> classB) {
-		// end recursion
-		if (classA.equals(classB))
-			return true;
-
-		boolean superclass = false;
-
-		// check superclass
-		Class<?> superClass = classA.getSuperclass();
-		if (superClass != null) {
-			if (superClass.equals(classB))
-				superclass = true;
-			else
-				// recursion
-				superclass = hasSuperClass(superClass, classB);
-		}
-
-		if (!superclass) {
-			// check interfaces, recursively
-			Class<?>[] interfaces = classA.getInterfaces();
-			for (Class<?> interfaze : interfaces) {
-				if (interfaze.equals(classB))
-					return true;
-				else {
-					return hasSuperClass(interfaze, classB);
-				}
-			}
-		}
-
-		return superclass;
-
-	}
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java:
-
-import static org.junit.Assert"
+Write a full test class with test cases to validate the method defined above.",classA.() {() {()
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -450,28 +334,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `checkValidObject` method"
+Write a full test class with test cases to validate the method defined above.",.........
 "public static JMSException create(String message, Throwable cause) {
         if (cause instanceof JMSException) {
             return (JMSException) cause;
@@ -524,37 +387,8 @@ public static JMSException create(String message, Throwable cause) {
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSException create(String message, Throwable cause) {
-        if (cause instanceof JMSException) {
-            return (JMSException) cause;
-        }
-
-        if (cause.getCause() instanceof JMSException) {
-            return (JMSException) cause.getCause();
-        }
-
-        if (message == null || message.isEmpty()) {
-            message = cause.getMessage();
-            if (message == null || message.isEmpty()) {
-                message = cause.toString();
-            }
-        }
-
-        JMSException exception = new JMSException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.","{(Throwable cause) {cause.getCause();
+        }{"
 "public static void checkPropertyNameIsValid(String propertyName, boolean validateNames) throws IllegalArgumentException {
         if (propertyName == null) {
             throw new IllegalArgumentException(""Property name must not be null"");
@@ -586,27 +420,7 @@ public static void checkPropertyNameIsValid(String propertyName, boolean validat
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkPropertyNameIsValid(String propertyName, boolean validateNames) throws IllegalArgumentException {
-        if (propertyName == null) {
-            throw new IllegalArgumentException(""Property name must not be null"");
-        } else if (propertyName.length() == 0) {
-            throw new IllegalArgumentException(""Property name must not be the empty string"");
-        }
-
-        if (validateNames) {
-            checkIdentifierLetterAndDigitRequirements(propertyName);
-            checkIdentifierIsntNullTrueFalse(propertyName);
-            checkIdentifierIsntLogicOperator(propertyName);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",{{{{{{{{{
 "@Override
     public JMSProducer setProperty(String name, boolean value) {
         return setObjectProperty(name, value);
@@ -625,16 +439,7 @@ import org.junit.jupiter"
         return setObjectProperty(name, value);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer setProperty(String name, boolean value) {
-        return setObjectProperty(name, value);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class with test cases to validate the `setProperty`"
+Write a full test class with test cases to validate the method defined above.",JMSProducerJMSProducerJMSProducerJMSProducerJMS
 "@Override
     public long getLongProperty(String name) {
         try {
@@ -658,20 +463,7 @@ Here is an example of a full test class with test cases to validate the `setProp
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public long getLongProperty(String name) {
-        try {
-            return convertPropertyTo(name, messageProperties.get(name), Long.class);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-To write a full test class with test cases for the `getLongProperty` method,"
+Write a full test class with test cases to validate the method defined above.",{ @Override public{ @Override public{ @Override public{ @Override
 "public void stop() {
         if (stopped.compareAndSet(false, true)) {
             LOG.debug(""Stopping the JmsPoolConnectionFactory, number of connections in cache: {}"",
@@ -708,28 +500,7 @@ public void stop() {
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public void stop() {
-        if (stopped.compareAndSet(false, true)) {
-            LOG.debug(""Stopping the JmsPoolConnectionFactory, number of connections in cache: {}"",
-                      connectionsPool != null ? connectionsPool.getNumActive() : 0);
-            try {
-                if (connectionsPool != null) {
-                    connectionsPool.close();
-                    connectionsPool = null;
-                }
-            } catch (Exception ignored) {
-                LOG.trace(""Caught exception on close of the Connection pool: "", ignored);
-            }
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.Before;"
+Write a full test class with test cases to validate the method defined above.",{{{.( ) ;.) ;.
 "@Override
     public void send(Queue queue, Message message, int deliveryMode, int priority, long timeToLine) throws JMSException {
         super.send(queue, message, deliveryMode, priority, timeToLine);
@@ -761,16 +532,7 @@ import org.junit.Before;"
         super.send(queue, message, deliveryMode, priority, timeToLine);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Queue queue, Message message, int deliveryMode, int priority, long timeToLine) throws JMSException {
-        super.send(queue, message, deliveryMode, priority, timeToLine);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Sure, here is a full test class with test cases to validate the `send` method"
+Write a full test class with test cases to validate the method defined above.",thethethethethethethethethe
 "public static void checkIdentifierLetterAndDigitRequirements(String identifier) {
         // An identifier is an unlimited-length sequence of letters and digits, the first of
         // which must be a letter.  A letter is any character for which the method
@@ -814,33 +576,7 @@ public static void checkIdentifierLetterAndDigitRequirements(String identifier) 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkIdentifierLetterAndDigitRequirements(String identifier) {
-        // An identifier is an unlimited-length sequence of letters and digits, the first of
-        // which must be a letter.  A letter is any character for which the method
-        // Character.isJavaLetter returns true.  This includes '_' and '$'.  A letter or digit
-        // is any character for which the method Character.isJavaLetterOrDigit returns true.
-        char startChar = identifier.charAt(0);
-        if (!(Character.isJavaIdentifierStart(startChar))) {
-            throw new IllegalArgumentException(""Identifier does not begin with a valid JMS identifier start character: '"" + identifier + ""' "");
-        }
-
-        // JMS part character
-        int length = identifier.length();
-        for (int i = 1; i < length; i++) {
-            char ch = identifier.charAt(i);
-            if (!(Character.isJavaIdentifierPart(ch))) {
-                throw new IllegalArgumentException(""Identifier contains invalid JMS identifier character '"" + ch + ""': '"" + identifier + ""' "");
-            }
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import org.junit.jupiter."
+Write a full test class with test cases to validate the method defined above.",thetheistheisthethethethe
 "public static void checkIdentifierIsntNullTrueFalse(String identifier) {
         // Identifiers cannot be the names NULL, TRUE, and FALSE.
         if (""NULL"".equals(identifier) || ""TRUE"".equals(identifier) || ""FALSE"".equals(identifier)) {
@@ -858,20 +594,7 @@ public static void checkIdentifierIsntNullTrueFalse(String identifier) {
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkIdentifierIsntNullTrueFalse(String identifier) {
-        // Identifiers cannot be the names NULL, TRUE, and FALSE.
-        if (""NULL"".equals(identifier) || ""TRUE"".equals(identifier) || ""FALSE"".equals(identifier)) {
-            throw new IllegalArgumentException(""Identifier not allowed in JMS: '"" + identifier + ""'"");
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.","{{{""NULL"".equals(identifier) || ""TRUE"".equals"
 "@Override
     public JMSProducer setProperty(String name, boolean value) {
         return setObjectProperty(name, value);
@@ -890,18 +613,7 @@ import org.junit.jupiter"
         return setObjectProperty(name, value);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer setProperty(String name, boolean value) {
-        return setObjectProperty(name, value);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class with test cases to validate the method defined above:
-
-"
+Write a full test class with test cases to validate the method defined above.",JMSProducerJMSProducerJMSProducerJMSProducerJMS
 "@Override
     public void unsubscribe(String name) {
         try {
@@ -931,20 +643,7 @@ Here is a full test class with test cases to validate the method defined above:
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void unsubscribe(String name) {
-        try {
-            getSession().unsubscribe(name);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class with test cases to validate the `unsubscribe"
+Write a full test class with test cases to validate the method defined above.",{{{......
 "public static JMSException create(String message, Throwable cause) {
         if (cause instanceof JMSException) {
             return (JMSException) cause;
@@ -997,37 +696,8 @@ public static JMSException create(String message, Throwable cause) {
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSException create(String message, Throwable cause) {
-        if (cause instanceof JMSException) {
-            return (JMSException) cause;
-        }
-
-        if (cause.getCause() instanceof JMSException) {
-            return (JMSException) cause.getCause();
-        }
-
-        if (message == null || message.isEmpty()) {
-            message = cause.getMessage();
-            if (message == null || message.isEmpty()) {
-                message = cause.toString();
-            }
-        }
-
-        JMSException exception = new JMSException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.","{(Throwable cause) {cause.getCause();
+        }{"
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -1065,30 +735,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java:
-
-import static org.junit."
+Write a full test class with test cases to validate the method defined above.",.........
 "@SuppressWarnings(""unchecked"")
     public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
         if (value == null) {
@@ -1136,33 +783,7 @@ import static org.junit."
         return rc;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@SuppressWarnings(""unchecked"")
-    public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
-        if (value == null) {
-            if (Boolean.class.equals(target)) {
-                return (T) Boolean.FALSE;
-            } else if (Float.class.equals(target) || Double.class.equals(target)) {
-                throw new NullPointerException(""property "" + name + "" was null"");
-            } else if (Number.class.isAssignableFrom(target)) {
-                throw new NumberFormatException(""property "" + name + "" was null"");
-            } else {
-                return null;
-            }
-        }
-
-        T rc = (T) TypeConversionSupport.convert(value, target);
-        if (rc == null) {
-            throw new MessageFormatException(""Property "" + name + "" was a "" + value.getClass().getName() + "" and cannot be read as a "" + target.getName());
-        }
-
-        return rc;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that validates the `convertPropertyTo` method:"
+Write a full test class with test cases to validate the method defined above.",{(String) name);if (String.class.isAssignableFrom(
 "public static JMSRuntimeException createRuntimeException(Exception exception) {
         JMSRuntimeException result = null;
         JMSException source = null;
@@ -1240,50 +861,7 @@ public static JMSRuntimeException createRuntimeException(Exception exception) {
         return result;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSRuntimeException createRuntimeException(Exception exception) {
-        JMSRuntimeException result = null;
-        JMSException source = null;
-
-        if (!(exception instanceof JMSException)) {
-            throw new JMSRuntimeException(exception.getMessage(), null, exception);
-        } else {
-            source = (JMSException) exception;
-        }
-
-        if (source instanceof IllegalStateException) {
-            result = new IllegalStateRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidClientIDException) {
-            result = new InvalidClientIDRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidDestinationException) {
-            result = new InvalidDestinationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidSelectorException) {
-            result = new InvalidSelectorRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof JMSSecurityException) {
-            result = new JMSSecurityRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageFormatException) {
-            result = new MessageFormatRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageNotWriteableException) {
-            result = new MessageNotWriteableRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof ResourceAllocationException) {
-            result = new ResourceAllocationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionInProgressException) {
-            result = new TransactionInProgressRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionRolledBackException) {
-            result = new TransactionRolledBackRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else {
-            result = new JMSRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        }
-
-        return result;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.Assert.*;"
+Write a full test class with test cases to validate the method defined above.",{= new() ;() ;()
 "@Override
     public void send(Message message) throws JMSException {
         send(message, deliveryMode, priority, timeToLive);
@@ -1304,16 +882,7 @@ import static org.junit.Assert.*;"
         send(message, deliveryMode, priority, timeToLive);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Message message) throws JMSException {
-        send(message, deliveryMode, priority, timeToLive);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of how you might write a test class for the `send` method"
+Write a full test class with test cases to validate the method defined above.",public void{{......
 "@Override
     public JMSProducer setProperty(String name, boolean value) {
         return setObjectProperty(name, value);
@@ -1332,17 +901,7 @@ Here is an example of how you might write a test class for the `send` method"
         return setObjectProperty(name, value);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer setProperty(String name, boolean value) {
-        return setObjectProperty(name, value);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `setProperty` method:
-"
+Write a full test class with test cases to validate the method defined above.",JMSProducerJMSProducerJMSProducerJMSProducerJMS
 "@Override
     public TopicSubscriber createSubscriber(Topic topic) throws JMSException {
         return addTopicSubscriber(((TopicSession) getInternalSession()).createSubscriber(topic));
@@ -1366,16 +925,7 @@ Here's a full test class in Java that validates the `setProperty` method:
         return addTopicSubscriber(((TopicSession) getInternalSession()).createSubscriber(topic));
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public TopicSubscriber createSubscriber(Topic topic) throws JMSException {
-        return addTopicSubscriber(((TopicSession) getInternalSession()).createSubscriber(topic));
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class with test cases to validate the `createSubscriber` method:"
+Write a full test class with test cases to validate the method defined above.",{())))) {()
 "public static JMSRuntimeException createRuntimeException(Exception exception) {
         JMSRuntimeException result = null;
         JMSException source = null;
@@ -1453,50 +1003,7 @@ public static JMSRuntimeException createRuntimeException(Exception exception) {
         return result;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSRuntimeException createRuntimeException(Exception exception) {
-        JMSRuntimeException result = null;
-        JMSException source = null;
-
-        if (!(exception instanceof JMSException)) {
-            throw new JMSRuntimeException(exception.getMessage(), null, exception);
-        } else {
-            source = (JMSException) exception;
-        }
-
-        if (source instanceof IllegalStateException) {
-            result = new IllegalStateRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidClientIDException) {
-            result = new InvalidClientIDRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidDestinationException) {
-            result = new InvalidDestinationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidSelectorException) {
-            result = new InvalidSelectorRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof JMSSecurityException) {
-            result = new JMSSecurityRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageFormatException) {
-            result = new MessageFormatRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageNotWriteableException) {
-            result = new MessageNotWriteableRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof ResourceAllocationException) {
-            result = new ResourceAllocationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionInProgressException) {
-            result = new TransactionInProgressRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionRolledBackException) {
-            result = new TransactionRolledBackRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else {
-            result = new JMSRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        }
-
-        return result;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",{= new() ;() ;()
 "@SuppressWarnings(""unchecked"")
     public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
         if (value == null) {
@@ -1544,33 +1051,7 @@ import static org.junit.jupiter"
         return rc;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@SuppressWarnings(""unchecked"")
-    public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
-        if (value == null) {
-            if (Boolean.class.equals(target)) {
-                return (T) Boolean.FALSE;
-            } else if (Float.class.equals(target) || Double.class.equals(target)) {
-                throw new NullPointerException(""property "" + name + "" was null"");
-            } else if (Number.class.isAssignableFrom(target)) {
-                throw new NumberFormatException(""property "" + name + "" was null"");
-            } else {
-                return null;
-            }
-        }
-
-        T rc = (T) TypeConversionSupport.convert(value, target);
-        if (rc == null) {
-            throw new MessageFormatException(""Property "" + name + "" was a "" + value.getClass().getName() + "" and cannot be read as a "" + target.getName());
-        }
-
-        return rc;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that validates the `convertPropertyTo` method:"
+Write a full test class with test cases to validate the method defined above.",{(String) name);if (String.class.isAssignableFrom(
 "public static JMSRuntimeException createRuntimeException(Exception exception) {
         JMSRuntimeException result = null;
         JMSException source = null;
@@ -1648,50 +1129,7 @@ public static JMSRuntimeException createRuntimeException(Exception exception) {
         return result;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSRuntimeException createRuntimeException(Exception exception) {
-        JMSRuntimeException result = null;
-        JMSException source = null;
-
-        if (!(exception instanceof JMSException)) {
-            throw new JMSRuntimeException(exception.getMessage(), null, exception);
-        } else {
-            source = (JMSException) exception;
-        }
-
-        if (source instanceof IllegalStateException) {
-            result = new IllegalStateRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidClientIDException) {
-            result = new InvalidClientIDRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidDestinationException) {
-            result = new InvalidDestinationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidSelectorException) {
-            result = new InvalidSelectorRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof JMSSecurityException) {
-            result = new JMSSecurityRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageFormatException) {
-            result = new MessageFormatRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageNotWriteableException) {
-            result = new MessageNotWriteableRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof ResourceAllocationException) {
-            result = new ResourceAllocationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionInProgressException) {
-            result = new TransactionInProgressRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionRolledBackException) {
-            result = new TransactionRolledBackRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else {
-            result = new JMSRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        }
-
-        return result;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.Assert.*;"
+Write a full test class with test cases to validate the method defined above.",{= new() ;() ;()
 "@Override
     public Topic getTopic() throws JMSException {
         return (Topic) getDestination();
@@ -1718,18 +1156,7 @@ import static org.junit.Assert.*;"
         return (Topic) getDestination();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Topic getTopic() throws JMSException {
-        return (Topic) getDestination();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a test class in Java using JUnit:
-
-import static"
+Write a full test class with test cases to validate the method defined above.",{{{}{{}{}
 "@Override
     public JMSProducer send(Destination destination, Message message) {
         try {
@@ -1763,24 +1190,7 @@ import static"
         return this;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer send(Destination destination, Message message) {
-        try {
-            doSend(destination, message);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-
-        return this;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import javax.jms.Destination"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{}{
 "@Override
     public TemporaryTopic createTemporaryTopic() {
         try {
@@ -1809,20 +1219,7 @@ import javax.jms.Destination"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public TemporaryTopic createTemporaryTopic() {
-        try {
-            return getSession().createTemporaryTopic();
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `createTemporaryTopic` method"
+Write a full test class with test cases to validate the method defined above.",{{{{{{{{{
 "@Override
     public TopicSubscriber createDurableSubscriber(Topic topic, String selector) throws JMSException {
         return addTopicSubscriber(getInternalSession().createDurableSubscriber(topic, selector));
@@ -1846,16 +1243,7 @@ Here's a full test class in Java that validates the `createTemporaryTopic` metho
         return addTopicSubscriber(getInternalSession().createDurableSubscriber(topic, selector));
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public TopicSubscriber createDurableSubscriber(Topic topic, String selector) throws JMSException {
-        return addTopicSubscriber(getInternalSession().createDurableSubscriber(topic, selector));
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `createDurableSubscriber`"
+Write a full test class with test cases to validate the method defined above.",{{topictopictopictopictopictopictopic
 "@Override
     public byte getByteProperty(String name) {
         try {
@@ -1879,20 +1267,7 @@ Here's a full test class in Java that validates the `createDurableSubscriber`"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public byte getByteProperty(String name) {
-        try {
-            return convertPropertyTo(name, messageProperties.get(name), Byte.class);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java using JUnit to validate the `getByte"
+Write a full test class with test cases to validate the method defined above.",{{{.( ) ;.( ) ;
 "@Override
     public XAResource getXAResource() {
         final PooledSessionHolder session;
@@ -1938,29 +1313,7 @@ Here's a full test class in Java using JUnit to validate the `getByte"
         return null;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public XAResource getXAResource() {
-        final PooledSessionHolder session;
-        try {
-            session = safeGetSessionHolder();
-        } catch (JMSException e) {
-            throw JMSExceptionSupport.createRuntimeException(e);
-        }
-
-        if (session.getSession() instanceof XASession) {
-            return ((XASession) session.getSession()).getXAResource();
-        }
-
-        return null;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class with test cases to validate the method defined above:
-
-"
+Write a full test class with test cases to validate the method defined above.",{{()() {() {
 "public QueueSender getQueueSender() throws JMSException {
         return (QueueSender) getMessageProducer();
     }","@Test
@@ -1985,15 +1338,7 @@ public QueueSender getQueueSender() throws JMSException {
         return (QueueSender) getMessageProducer();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public QueueSender getQueueSender() throws JMSException {
-        return (QueueSender) getMessageProducer();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `getQueueSender` method"
+Write a full test class with test cases to validate the method defined above.",{ public( ){( ))) {
 "public static void checkIdentifierLetterAndDigitRequirements(String identifier) {
         // An identifier is an unlimited-length sequence of letters and digits, the first of
         // which must be a letter.  A letter is any character for which the method
@@ -2037,33 +1382,7 @@ public static void checkIdentifierLetterAndDigitRequirements(String identifier) 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkIdentifierLetterAndDigitRequirements(String identifier) {
-        // An identifier is an unlimited-length sequence of letters and digits, the first of
-        // which must be a letter.  A letter is any character for which the method
-        // Character.isJavaLetter returns true.  This includes '_' and '$'.  A letter or digit
-        // is any character for which the method Character.isJavaLetterOrDigit returns true.
-        char startChar = identifier.charAt(0);
-        if (!(Character.isJavaIdentifierStart(startChar))) {
-            throw new IllegalArgumentException(""Identifier does not begin with a valid JMS identifier start character: '"" + identifier + ""' "");
-        }
-
-        // JMS part character
-        int length = identifier.length();
-        for (int i = 1; i < length; i++) {
-            char ch = identifier.charAt(i);
-            if (!(Character.isJavaIdentifierPart(ch))) {
-                throw new IllegalArgumentException(""Identifier contains invalid JMS identifier character '"" + ch + ""': '"" + identifier + ""' "");
-            }
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",thetheistheisthethethethe
 "@Override
     public Queue getQueue() throws JMSException {
         return (Queue) getDestination();
@@ -2090,18 +1409,7 @@ import org.junit.jupiter"
         return (Queue) getDestination();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Queue getQueue() throws JMSException {
-        return (Queue) getDestination();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a test class in Java using JUnit:
-
-import static"
+Write a full test class with test cases to validate the method defined above.",{{{}{{}{}
 "@Override
     public void publish(Message message) throws JMSException {
         super.send(message);
@@ -2136,18 +1444,7 @@ import static"
         super.send(message);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void publish(Message message) throws JMSException {
-        super.send(message);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java that validates the `publish` method:
-
-import"
+Write a full test class with test cases to validate the method defined above.",public void{{}{{}{}
 "@Override
     public void setDeliveryDelay(long deliveryDelay) throws JMSException {
         checkClosed();
@@ -2189,22 +1486,7 @@ import"
         this.messageProducer.setDeliveryDelay(deliveryDelay);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void setDeliveryDelay(long deliveryDelay) throws JMSException {
-        checkClosed();
-        session.checkClientJMSVersionSupport(2, 0);
-
-        this.deliveryDelay = deliveryDelay;
-        this.messageProducer.setDeliveryDelay(deliveryDelay);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class in Java using JUnit:
-
-import"
+Write a full test class with test cases to validate the method defined above.",thethethethethethethethethe
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -2242,28 +1524,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `checkValidObject` method"
+Write a full test class with test cases to validate the method defined above.",.........
 "@Override
     public TextMessage createTextMessage() {
         try {
@@ -2292,20 +1553,7 @@ Here's a full test class in Java that validates the `checkValidObject` method"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public TextMessage createTextMessage() {
-        try {
-            return getSession().createTextMessage();
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java using JUnit to validate the `createText"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{{{
 "public static void checkPropertyNameIsValid(String propertyName, boolean validateNames) throws IllegalArgumentException {
         if (propertyName == null) {
             throw new IllegalArgumentException(""Property name must not be null"");
@@ -2337,27 +1585,7 @@ public static void checkPropertyNameIsValid(String propertyName, boolean validat
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkPropertyNameIsValid(String propertyName, boolean validateNames) throws IllegalArgumentException {
-        if (propertyName == null) {
-            throw new IllegalArgumentException(""Property name must not be null"");
-        } else if (propertyName.length() == 0) {
-            throw new IllegalArgumentException(""Property name must not be the empty string"");
-        }
-
-        if (validateNames) {
-            checkIdentifierLetterAndDigitRequirements(propertyName);
-            checkIdentifierIsntNullTrueFalse(propertyName);
-            checkIdentifierIsntLogicOperator(propertyName);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class for the `checkPropertyNameIsValid` method:
-
-import"
+Write a full test class with test cases to validate the method defined above.",{{{{{{{{{
 "public static MessageEOFException createMessageEOFException(Throwable cause) {
         String message = cause.getMessage();
         if (message == null || message.length() == 0) {
@@ -2390,25 +1618,7 @@ public static MessageEOFException createMessageEOFException(Throwable cause) {
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static MessageEOFException createMessageEOFException(Throwable cause) {
-        String message = cause.getMessage();
-        if (message == null || message.length() == 0) {
-            message = cause.toString();
-        }
-
-        MessageEOFException exception = new MessageEOFException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that validates the `createMessageEOFException` method"
+Write a full test class with test cases to validate the method defined above.",public static{{{=( Throwable{( Throwable
 "@Override
     public void send(Message message) throws JMSException {
         send(message, deliveryMode, priority, timeToLive);
@@ -2442,16 +1652,7 @@ Here's a test class in Java that validates the `createMessageEOFException` metho
         send(message, deliveryMode, priority, timeToLive);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Message message) throws JMSException {
-        send(message, deliveryMode, priority, timeToLive);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of how you might write a test class for the `send` method"
+Write a full test class with test cases to validate the method defined above.",public void{{......
 "@Override
     public void setMessageListener(MessageListener listener) throws JMSException {
         checkClosed();
@@ -2494,17 +1695,7 @@ Here is an example of how you might write a test class for the `send` method"
         messageConsumer.setMessageListener(listener);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void setMessageListener(MessageListener listener) throws JMSException {
-        checkClosed();
-        messageConsumer.setMessageListener(listener);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `setMessageListener` method"
+Write a full test class with test cases to validate the method defined above.",{{{{{}{{
 "public static JMSException create(String message, Throwable cause) {
         if (cause instanceof JMSException) {
             return (JMSException) cause;
@@ -2557,37 +1748,8 @@ public static JMSException create(String message, Throwable cause) {
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSException create(String message, Throwable cause) {
-        if (cause instanceof JMSException) {
-            return (JMSException) cause;
-        }
-
-        if (cause.getCause() instanceof JMSException) {
-            return (JMSException) cause.getCause();
-        }
-
-        if (message == null || message.isEmpty()) {
-            message = cause.getMessage();
-            if (message == null || message.isEmpty()) {
-                message = cause.toString();
-            }
-        }
-
-        JMSException exception = new JMSException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that validates the `create` method:
-
-"
+Write a full test class with test cases to validate the method defined above.","{(Throwable cause) {cause.getCause();
+        }{"
 "@Override
     public Message receive() throws JMSException {
         checkClosed();
@@ -2615,17 +1777,7 @@ Here's a test class in Java that validates the `create` method:
         return messageConsumer.receive();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Message receive() throws JMSException {
-        checkClosed();
-        return messageConsumer.receive();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of how you might write a test class for the `receive` method"
+Write a full test class with test cases to validate the method defined above.", publicvoid( ){( ){( ) ;
 "@Override
     public String getMessageSelector() {
         try {
@@ -2657,22 +1809,7 @@ Here is an example of how you might write a test class for the `receive` method"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public String getMessageSelector() {
-        try {
-            return consumer.getMessageSelector();
-        } catch (JMSException e) {
-            throw JMSExceptionSupport.createRuntimeException(e);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{}{
 "@Override
     public JMSProducer setProperty(String name, boolean value) {
         return setObjectProperty(name, value);
@@ -2691,17 +1828,7 @@ import org.junit.jupiter"
         return setObjectProperty(name, value);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer setProperty(String name, boolean value) {
-        return setObjectProperty(name, value);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `setProperty` method:
-"
+Write a full test class with test cases to validate the method defined above.",JMSProducerJMSProducerJMSProducerJMSProducerJMS
 "@Override
     public ExceptionListener getExceptionListener() {
         try {
@@ -2748,22 +1875,7 @@ Here's a full test class in Java that validates the `setProperty` method:
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public ExceptionListener getExceptionListener() {
-        try {
-            return connection.getExceptionListener();
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class with test cases to validate the method defined above:
-
-"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{}{
 "@Override
     public double getDoubleProperty(String name) {
         try {
@@ -2787,22 +1899,7 @@ Here is a full test class with test cases to validate the method defined above:
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public double getDoubleProperty(String name) {
-        try {
-            return convertPropertyTo(name, messageProperties.get(name), Double.class);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a test class in Java using JUnit:
-
-import static"
+Write a full test class with test cases to validate the method defined above.",{ @Override public{ @Override public{ @Override public{ @Override
 "@Override
     public Message receiveNoWait() {
         try {
@@ -2833,22 +1930,7 @@ import static"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Message receiveNoWait() {
-        try {
-            return consumer.receiveNoWait();
-        } catch (JMSException e) {
-            throw JMSExceptionSupport.createRuntimeException(e);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",public{{{}{{}{
 "@SuppressWarnings(""unchecked"")
     public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
         if (value == null) {
@@ -2896,35 +1978,7 @@ import org.junit.jupiter"
         return rc;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@SuppressWarnings(""unchecked"")
-    public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
-        if (value == null) {
-            if (Boolean.class.equals(target)) {
-                return (T) Boolean.FALSE;
-            } else if (Float.class.equals(target) || Double.class.equals(target)) {
-                throw new NullPointerException(""property "" + name + "" was null"");
-            } else if (Number.class.isAssignableFrom(target)) {
-                throw new NumberFormatException(""property "" + name + "" was null"");
-            } else {
-                return null;
-            }
-        }
-
-        T rc = (T) TypeConversionSupport.convert(value, target);
-        if (rc == null) {
-            throw new MessageFormatException(""Property "" + name + "" was a "" + value.getClass().getName() + "" and cannot be read as a "" + target.getName());
-        }
-
-        return rc;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",{(String) name);if (String.class.isAssignableFrom(
 "@Override
     public JMSProducer send(Destination destination, Message message) {
         try {
@@ -2973,22 +2027,7 @@ import static org.junit.jupiter"
         return this;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer send(Destination destination, Message message) {
-        try {
-            doSend(destination, message);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-
-        return this;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java using JUnit to validate the `send`"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{}{
 "@Override
     public String toString() {
         return getClass().getSimpleName() + "" { "" + messageProducer + "" }"";
@@ -3007,18 +2046,7 @@ Here's a full test class in Java using JUnit to validate the `send`"
         return getClass().getSimpleName() + "" { "" + messageProducer + "" }"";
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public String toString() {
-        return getClass().getSimpleName() + "" { "" + messageProducer + "" }"";
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.", public{{{}{}{}
 "public void setConnectionFactory(final Object factory) {
         if (factory instanceof ConnectionFactory) {
             String logMessage = ""JMS ConnectionFactory on classpath is not a JMS 2.0+ version."";
@@ -3062,33 +2090,7 @@ public void setConnectionFactory(final Object factory) {
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public void setConnectionFactory(final Object factory) {
-        if (factory instanceof ConnectionFactory) {
-            String logMessage = ""JMS ConnectionFactory on classpath is not a JMS 2.0+ version."";
-            try {
-                ConnectionFactory.class.getMethod(""createContext"", int.class);
-                logMessage = ""Provided ConnectionFactory implementation is not JMS 2.0+ capable."";
-                factory.getClass().getMethod(""createContext"", int.class);
-                logMessage = ""Provided ConnectionFactory implementation is JMS 2.0+ capable."";
-                jmsContextSupported = true;
-            } catch (NoSuchMethodException | SecurityException e) {
-            } finally {
-                LOG.info(logMessage);
-            }
-
-            this.connectionFactory = factory;
-        } else {
-            throw new IllegalArgumentException(""connectionFactory should implement javax.jms.ConnectionFactory"");
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import static org.junit.Assert"
+Write a full test class with test cases to validate the method defined above.",{........
 "@Override
     public String getMessageSelector() throws JMSException {
         checkClosed();
@@ -3117,19 +2119,7 @@ import static org.junit.Assert"
         return messageConsumer.getMessageSelector();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public String getMessageSelector() throws JMSException {
-        checkClosed();
-        return messageConsumer.getMessageSelector();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class in Java using JUnit:
-
-import"
+Write a full test class with test cases to validate the method defined above.",public{{{}{{}{
 "@Override
     public void send(Message message) throws JMSException {
         send(message, deliveryMode, priority, timeToLive);
@@ -3175,16 +2165,7 @@ import"
         send(message, deliveryMode, priority, timeToLive);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Message message) throws JMSException {
-        send(message, deliveryMode, priority, timeToLive);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class with test cases to validate the `send`"
+Write a full test class with test cases to validate the method defined above.",public void{{......
 "public static void checkIdentifierIsntLogicOperator(String identifier) {
         // Identifiers cannot be NOT, AND, OR, BETWEEN, LIKE, IN, IS, or ESCAPE.
         if (""NOT"".equals(identifier) || ""AND"".equals(identifier) || ""OR"".equals(identifier) ||
@@ -3208,21 +2189,7 @@ public static void checkIdentifierIsntLogicOperator(String identifier) {
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkIdentifierIsntLogicOperator(String identifier) {
-        // Identifiers cannot be NOT, AND, OR, BETWEEN, LIKE, IN, IS, or ESCAPE.
-        if (""NOT"".equals(identifier) || ""AND"".equals(identifier) || ""OR"".equals(identifier) ||
-            ""BETWEEN"".equals(identifier) || ""LIKE"".equals(identifier) || ""IN"".equals(identifier) ||
-            ""IS"".equals(identifier) || ""ESCAPE"".equals(identifier)) {
-
-            throw new IllegalArgumentException(""Identifier not allowed in JMS: '"" + identifier + ""'"");
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `checkIdentifierIsntLogic"
+Write a full test class with test cases to validate the method defined above.","{{""IS"".equals(identifier) || ""IN"".equals(identifier"
 "@Override
     public void send(Message message) throws JMSException {
         send(message, deliveryMode, priority, timeToLive);
@@ -3269,16 +2236,7 @@ Here's a full test class in Java that validates the `checkIdentifierIsntLogic"
         send(message, deliveryMode, priority, timeToLive);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Message message) throws JMSException {
-        send(message, deliveryMode, priority, timeToLive);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Sure, here is a full test class with test cases to validate the `send` method"
+Write a full test class with test cases to validate the method defined above.",public void{{......
 "@Override
     public JMSProducer send(Destination destination, Message message) {
         try {
@@ -3318,22 +2276,7 @@ Sure, here is a full test class with test cases to validate the `send` method"
         return this;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer send(Destination destination, Message message) {
-        try {
-            doSend(destination, message);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-
-        return this;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-To write a full test class with test cases for the `send` method, you can"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{}{
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -3371,28 +2314,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `checkValidObject` method"
+Write a full test class with test cases to validate the method defined above.",.........
 "@Override
     public void close() throws JMSException {
         if (ignoreClose) {
@@ -3571,90 +2493,7 @@ Here's a full test class in Java that validates the `checkValidObject` method"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void close() throws JMSException {
-        if (ignoreClose) {
-            return;
-        }
-
-        if (closed.compareAndSet(false, true)) {
-            boolean invalidate = false;
-            try {
-                // lets reset the session
-                getInternalSession().setMessageListener(null);
-
-                // Close any consumers, producers and browsers that may have been created.
-                for (MessageConsumer consumer : consumers) {
-                    consumer.close();
-                }
-
-                for (QueueBrowser browser : browsers) {
-                    browser.close();
-                }
-
-                for (MessageProducer producer : producers) {
-                    producer.close();
-                }
-
-                consumers.clear();
-                producers.clear();
-                browsers.clear();
-
-                if (transactional && !isXa) {
-                    try {
-                        getInternalSession().rollback();
-                    } catch (JMSException e) {
-                        invalidate = true;
-                        LOG.warn(""Caught exception trying rollback() when putting session back into the pool, will invalidate. "" + e, e);
-                    }
-                }
-            } catch (JMSException ex) {
-                invalidate = true;
-                LOG.warn(""Caught exception trying close() when putting session back into the pool, will invalidate. "" + ex, ex);
-            } finally {
-                consumers.clear();
-                browsers.clear();
-                for (JmsPoolSessionEventListener listener : this.sessionEventListeners) {
-                    listener.onSessionClosed(this);
-                }
-                sessionEventListeners.clear();
-            }
-
-            if (invalidate) {
-                // lets close the session and not put the session back into the pool
-                // instead invalidate it so the pool can create a new one on demand.
-                if (sessionHolder != null) {
-                    try {
-                        sessionHolder.close();
-                    } catch (JMSException e1) {
-                        LOG.trace(""Ignoring exception on close as discarding session: "" + e1, e1);
-                    }
-                }
-
-                try {
-                    sessionPool.invalidateObject(key, sessionHolder);
-                } catch (Exception e) {
-                    LOG.trace(""Ignoring exception on invalidateObject as discarding session: "" + e, e);
-                }
-            } else {
-                try {
-                    sessionPool.returnObject(key, sessionHolder);
-                } catch (Exception e) {
-                    javax.jms.IllegalStateException illegalStateException = new javax.jms.IllegalStateException(e.toString());
-                    illegalStateException.initCause(e);
-                    throw illegalStateException;
-                }
-            }
-
-            sessionHolder = null;
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java that validates the `close()` method of the `J"
+Write a full test class with test cases to validate the method defined above.",( ) {( ) ;( ) ;( ) ;( )
 "@Override
     public <T> T receiveBodyNoWait(Class<T> desired) {
         throw new JMSRuntimeException(""Pooled JMSConsumer does not support receiveBody"");
@@ -3673,16 +2512,7 @@ Here is a test class in Java that validates the `close()` method of the `J"
         throw new JMSRuntimeException(""Pooled JMSConsumer does not support receiveBody"");
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public <T> T receiveBodyNoWait(Class<T> desired) {
-        throw new JMSRuntimeException(""Pooled JMSConsumer does not support receiveBody"");
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of how you can write a test class for the `receiveBodyNo"
+Write a full test class with test cases to validate the method defined above.",<T><T><T><T><T
 "@Override
     public Topic getTopic() throws JMSException {
         return getTopicSubscriber().getTopic();
@@ -3709,16 +2539,7 @@ Here is an example of how you can write a test class for the `receiveBodyNo"
         return getTopicSubscriber().getTopic();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Topic getTopic() throws JMSException {
-        return getTopicSubscriber().getTopic();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `getTopic()` method:"
+Write a full test class with test cases to validate the method defined above.",{{{.....
 "@Override
     public void send(Queue queue, Message message, int deliveryMode, int priority, long timeToLine) throws JMSException {
         super.send(queue, message, deliveryMode, priority, timeToLine);
@@ -3753,16 +2574,7 @@ Here's a full test class in Java that validates the `getTopic()` method:"
         super.send(queue, message, deliveryMode, priority, timeToLine);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Queue queue, Message message, int deliveryMode, int priority, long timeToLine) throws JMSException {
-        super.send(queue, message, deliveryMode, priority, timeToLine);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-To validate the `send` method defined in the class, we need to create a test"
+Write a full test class with test cases to validate the method defined above.",thethethethethethethethethe
 "@Override
     public <T> T receiveBody(Class<T> desired) {
         throw new JMSRuntimeException(""Pooled JMSConsumer does not support receiveBody"");
@@ -3781,16 +2593,7 @@ To validate the `send` method defined in the class, we need to create a test"
         throw new JMSRuntimeException(""Pooled JMSConsumer does not support receiveBody"");
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public <T> T receiveBody(Class<T> desired) {
-        throw new JMSRuntimeException(""Pooled JMSConsumer does not support receiveBody"");
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `receiveBody` method:"
+Write a full test class with test cases to validate the method defined above.",publicT<T><T><T><T
 "@Override
     public void close() {
         try {
@@ -3815,22 +2618,7 @@ Here's a full test class in Java that validates the `receiveBody` method:"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void close() {
-        try {
-            consumer.close();
-        } catch (JMSException e) {
-            throw JMSExceptionSupport.createRuntimeException(e);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java using JUnit:
-
-import static org."
+Write a full test class with test cases to validate the method defined above.",{ @Override public void{ @Override public void{{ @Override public
 "@Override
     public void close() throws JMSException {
         // ensure session removes consumer from it's list of managed resources.
@@ -3858,20 +2646,7 @@ import static org."
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void close() throws JMSException {
-        // ensure session removes consumer from it's list of managed resources.
-        if (closed.compareAndSet(false, true)) {
-            session.onConsumerClose(messageConsumer);
-            messageConsumer.close();
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java that validates the `close` method of the `"
+Write a full test class with test cases to validate the method defined above.",{{() {() {( ) ;
 "@Override
     public ConnectionMetaData getMetaData() throws JMSException {
         return getConnection().getMetaData();
@@ -3886,16 +2661,7 @@ Here is a full test class in Java that validates the `close` method of the `"
         return getConnection().getMetaData();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public ConnectionMetaData getMetaData() throws JMSException {
-        return getConnection().getMetaData();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class with test cases for the `getMetaData`"
+Write a full test class with test cases to validate the method defined above.", public void{{{{}{}
 "public static void checkIdentifierIsntLogicOperator(String identifier) {
         // Identifiers cannot be NOT, AND, OR, BETWEEN, LIKE, IN, IS, or ESCAPE.
         if (""NOT"".equals(identifier) || ""AND"".equals(identifier) || ""OR"".equals(identifier) ||
@@ -3919,21 +2685,7 @@ public static void checkIdentifierIsntLogicOperator(String identifier) {
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkIdentifierIsntLogicOperator(String identifier) {
-        // Identifiers cannot be NOT, AND, OR, BETWEEN, LIKE, IN, IS, or ESCAPE.
-        if (""NOT"".equals(identifier) || ""AND"".equals(identifier) || ""OR"".equals(identifier) ||
-            ""BETWEEN"".equals(identifier) || ""LIKE"".equals(identifier) || ""IN"".equals(identifier) ||
-            ""IS"".equals(identifier) || ""ESCAPE"".equals(identifier)) {
-
-            throw new IllegalArgumentException(""Identifier not allowed in JMS: '"" + identifier + ""'"");
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `checkIdentifierIsntLogic"
+Write a full test class with test cases to validate the method defined above.","{{""IS"".equals(identifier) || ""IN"".equals(identifier"
 "@Override
     public JMSProducer setProperty(String name, boolean value) {
         return setObjectProperty(name, value);
@@ -3952,17 +2704,7 @@ Here's a full test class in Java that validates the `checkIdentifierIsntLogic"
         return setObjectProperty(name, value);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer setProperty(String name, boolean value) {
-        return setObjectProperty(name, value);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `setProperty` method:
-"
+Write a full test class with test cases to validate the method defined above.",JMSProducerJMSProducerJMSProducerJMSProducerJMS
 "@Override
     public boolean propertyExists(String name) {
         return messageProperties.containsKey(name);
@@ -3987,18 +2729,7 @@ Here's a full test class in Java that validates the `setProperty` method:
         return messageProperties.containsKey(name);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public boolean propertyExists(String name) {
-        return messageProperties.containsKey(name);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",publicpublicpublicpublic{{}{}
 "@Override
     public Message receiveNoWait() throws JMSException {
         checkClosed();
@@ -4026,17 +2757,7 @@ import org.junit.jupiter"
         return messageConsumer.receiveNoWait();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Message receiveNoWait() throws JMSException {
-        checkClosed();
-        return messageConsumer.receiveNoWait();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class with test cases to validate the `receiveNoWait` method"
+Write a full test class with test cases to validate the method defined above.",publicvoid{{messageConsumer.receiveNoWait();messageConsumer
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -4074,30 +2795,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",.........
 "@Override
     public void send(Queue queue, Message message, int deliveryMode, int priority, long timeToLine) throws JMSException {
         super.send(queue, message, deliveryMode, priority, timeToLine);
@@ -4119,17 +2817,7 @@ import org.junit.jupiter"
         super.send(queue, message, deliveryMode, priority, timeToLine);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Queue queue, Message message, int deliveryMode, int priority, long timeToLine) throws JMSException {
-        super.send(queue, message, deliveryMode, priority, timeToLine);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `send` method:
-"
+Write a full test class with test cases to validate the method defined above.",thethethethethethethethethe
 "public TopicSubscriber getTopicSubscriber() throws JMSException {
         return (TopicSubscriber) super.getMessageConsumer();
     }","@Test
@@ -4154,17 +2842,7 @@ public TopicSubscriber getTopicSubscriber() throws JMSException {
         return (TopicSubscriber) super.getMessageConsumer();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public TopicSubscriber getTopicSubscriber() throws JMSException {
-        return (TopicSubscriber) super.getMessageConsumer();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class in Java using JUnit:
-
-import"
+Write a full test class with test cases to validate the method defined above.",publicvoid{{{}{}{
 "public boolean isIgnoreClose() {
         return ignoreClose;
     }","@Test(timeout = 60000)
@@ -4180,15 +2858,7 @@ public boolean isIgnoreClose() {
         return ignoreClose;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public boolean isIgnoreClose() {
-        return ignoreClose;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `isIgnoreClose` method"
+Write a full test class with test cases to validate the method defined above.", publicvoid{{}{}{}
 "@Override
     public void close() throws JMSException {
         if (ignoreClose) {
@@ -4366,92 +3036,7 @@ Here's a full test class in Java that validates the `isIgnoreClose` method"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void close() throws JMSException {
-        if (ignoreClose) {
-            return;
-        }
-
-        if (closed.compareAndSet(false, true)) {
-            boolean invalidate = false;
-            try {
-                // lets reset the session
-                getInternalSession().setMessageListener(null);
-
-                // Close any consumers, producers and browsers that may have been created.
-                for (MessageConsumer consumer : consumers) {
-                    consumer.close();
-                }
-
-                for (QueueBrowser browser : browsers) {
-                    browser.close();
-                }
-
-                for (MessageProducer producer : producers) {
-                    producer.close();
-                }
-
-                consumers.clear();
-                producers.clear();
-                browsers.clear();
-
-                if (transactional && !isXa) {
-                    try {
-                        getInternalSession().rollback();
-                    } catch (JMSException e) {
-                        invalidate = true;
-                        LOG.warn(""Caught exception trying rollback() when putting session back into the pool, will invalidate. "" + e, e);
-                    }
-                }
-            } catch (JMSException ex) {
-                invalidate = true;
-                LOG.warn(""Caught exception trying close() when putting session back into the pool, will invalidate. "" + ex, ex);
-            } finally {
-                consumers.clear();
-                browsers.clear();
-                for (JmsPoolSessionEventListener listener : this.sessionEventListeners) {
-                    listener.onSessionClosed(this);
-                }
-                sessionEventListeners.clear();
-            }
-
-            if (invalidate) {
-                // lets close the session and not put the session back into the pool
-                // instead invalidate it so the pool can create a new one on demand.
-                if (sessionHolder != null) {
-                    try {
-                        sessionHolder.close();
-                    } catch (JMSException e1) {
-                        LOG.trace(""Ignoring exception on close as discarding session: "" + e1, e1);
-                    }
-                }
-
-                try {
-                    sessionPool.invalidateObject(key, sessionHolder);
-                } catch (Exception e) {
-                    LOG.trace(""Ignoring exception on invalidateObject as discarding session: "" + e, e);
-                }
-            } else {
-                try {
-                    sessionPool.returnObject(key, sessionHolder);
-                } catch (Exception e) {
-                    javax.jms.IllegalStateException illegalStateException = new javax.jms.IllegalStateException(e.toString());
-                    illegalStateException.initCause(e);
-                    throw illegalStateException;
-                }
-            }
-
-            sessionHolder = null;
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a test class in Java:
-
-import javax.jms"
+Write a full test class with test cases to validate the method defined above.",( ) {( ) ;( ) ;( ) ;( )
 "public static JMSRuntimeException createRuntimeException(Exception exception) {
         JMSRuntimeException result = null;
         JMSException source = null;
@@ -4529,50 +3114,7 @@ public static JMSRuntimeException createRuntimeException(Exception exception) {
         return result;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSRuntimeException createRuntimeException(Exception exception) {
-        JMSRuntimeException result = null;
-        JMSException source = null;
-
-        if (!(exception instanceof JMSException)) {
-            throw new JMSRuntimeException(exception.getMessage(), null, exception);
-        } else {
-            source = (JMSException) exception;
-        }
-
-        if (source instanceof IllegalStateException) {
-            result = new IllegalStateRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidClientIDException) {
-            result = new InvalidClientIDRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidDestinationException) {
-            result = new InvalidDestinationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidSelectorException) {
-            result = new InvalidSelectorRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof JMSSecurityException) {
-            result = new JMSSecurityRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageFormatException) {
-            result = new MessageFormatRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageNotWriteableException) {
-            result = new MessageNotWriteableRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof ResourceAllocationException) {
-            result = new ResourceAllocationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionInProgressException) {
-            result = new TransactionInProgressRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionRolledBackException) {
-            result = new TransactionRolledBackRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else {
-            result = new JMSRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        }
-
-        return result;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java:
-
-import org.junit.j"
+Write a full test class with test cases to validate the method defined above.",{= new() ;() ;()
 "public static void checkIdentifierIsntLogicOperator(String identifier) {
         // Identifiers cannot be NOT, AND, OR, BETWEEN, LIKE, IN, IS, or ESCAPE.
         if (""NOT"".equals(identifier) || ""AND"".equals(identifier) || ""OR"".equals(identifier) ||
@@ -4596,21 +3138,7 @@ public static void checkIdentifierIsntLogicOperator(String identifier) {
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkIdentifierIsntLogicOperator(String identifier) {
-        // Identifiers cannot be NOT, AND, OR, BETWEEN, LIKE, IN, IS, or ESCAPE.
-        if (""NOT"".equals(identifier) || ""AND"".equals(identifier) || ""OR"".equals(identifier) ||
-            ""BETWEEN"".equals(identifier) || ""LIKE"".equals(identifier) || ""IN"".equals(identifier) ||
-            ""IS"".equals(identifier) || ""ESCAPE"".equals(identifier)) {
-
-            throw new IllegalArgumentException(""Identifier not allowed in JMS: '"" + identifier + ""'"");
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that tests the `checkIdentifierIsntLogicOperator"
+Write a full test class with test cases to validate the method defined above.","{{""IS"".equals(identifier) || ""IN"".equals(identifier"
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -4648,30 +3176,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.Assert.*;"
+Write a full test class with test cases to validate the method defined above.",.........
 "@Override
     public void send(Message message) throws JMSException {
         send(message, deliveryMode, priority, timeToLive);
@@ -4716,17 +3221,7 @@ import static org.junit.Assert.*;"
         send(message, deliveryMode, priority, timeToLive);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Message message) throws JMSException {
-        send(message, deliveryMode, priority, timeToLive);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `send` method:
-"
+Write a full test class with test cases to validate the method defined above.",public void{{......
 "@Override
     public short getShortProperty(String name) {
         try {
@@ -4750,20 +3245,7 @@ Here's a full test class in Java that validates the `send` method:
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public short getShortProperty(String name) {
-        try {
-            return convertPropertyTo(name, messageProperties.get(name), Short.class);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-To write a full test class with test cases to validate the `getShortProperty` method"
+Write a full test class with test cases to validate the method defined above.",{ @Override protectedshort{ @Override protected{ @Override protected{
 "@Override
     public Queue createQueue(String queueName) {
         try {
@@ -4792,22 +3274,7 @@ To write a full test class with test cases to validate the `getShortProperty` me
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public Queue createQueue(String queueName) {
-        try {
-            return getSession().createQueue(queueName);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class in Java using JUnit:
-
-import"
+Write a full test class with test cases to validate the method defined above.",{{{......
 "@Override
     public void recover() {
         try {
@@ -4837,21 +3304,7 @@ import"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void recover() {
-        try {
-            getSession().recover();
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `recover()` method:
-"
+Write a full test class with test cases to validate the method defined above.",{{{{{{{{{
 "public static MessageEOFException createMessageEOFException(Throwable cause) {
         String message = cause.getMessage();
         if (message == null || message.length() == 0) {
@@ -4884,27 +3337,7 @@ public static MessageEOFException createMessageEOFException(Throwable cause) {
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static MessageEOFException createMessageEOFException(Throwable cause) {
-        String message = cause.getMessage();
-        if (message == null || message.length() == 0) {
-            message = cause.toString();
-        }
-
-        MessageEOFException exception = new MessageEOFException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.Assert.*;"
+Write a full test class with test cases to validate the method defined above.",public static{{{=( Throwable{( Throwable
 "public static JMSRuntimeException createRuntimeException(Exception exception) {
         JMSRuntimeException result = null;
         JMSException source = null;
@@ -4982,50 +3415,7 @@ public static JMSRuntimeException createRuntimeException(Exception exception) {
         return result;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSRuntimeException createRuntimeException(Exception exception) {
-        JMSRuntimeException result = null;
-        JMSException source = null;
-
-        if (!(exception instanceof JMSException)) {
-            throw new JMSRuntimeException(exception.getMessage(), null, exception);
-        } else {
-            source = (JMSException) exception;
-        }
-
-        if (source instanceof IllegalStateException) {
-            result = new IllegalStateRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidClientIDException) {
-            result = new InvalidClientIDRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidDestinationException) {
-            result = new InvalidDestinationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof InvalidSelectorException) {
-            result = new InvalidSelectorRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof JMSSecurityException) {
-            result = new JMSSecurityRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageFormatException) {
-            result = new MessageFormatRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof MessageNotWriteableException) {
-            result = new MessageNotWriteableRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof ResourceAllocationException) {
-            result = new ResourceAllocationRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionInProgressException) {
-            result = new TransactionInProgressRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else if (source instanceof TransactionRolledBackException) {
-            result = new TransactionRolledBackRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        } else {
-            result = new JMSRuntimeException(source.getMessage(), source.getErrorCode(), source);
-        }
-
-        return result;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.Assert.*;"
+Write a full test class with test cases to validate the method defined above.",{= new() ;() ;()
 "@Override
     public JMSProducer createProducer() {
         if (connectionRefCount.get() == 0) {
@@ -5079,32 +3469,7 @@ import static org.junit.Assert.*;"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer createProducer() {
-        if (connectionRefCount.get() == 0) {
-            throw new IllegalStateRuntimeException(""The Connection is closed"");
-        }
-
-        try {
-            if (sharedProducer == null) {
-                synchronized (this) {
-                    if (sharedProducer == null) {
-                        sharedProducer = (JmsPoolMessageProducer) getSession().createProducer(null);
-                    }
-                }
-            }
-
-            return new JmsPoolJMSProducer(getSession(), sharedProducer);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `createProducer` method:"
+Write a full test class with test cases to validate the method defined above.",{{(JmsPoolMessageProducer)(JmsPoolMessageProducer)
 "@Override
     public boolean getTransacted() {
         return sessionMode == JMSContext.SESSION_TRANSACTED;
@@ -5122,16 +3487,7 @@ Here's a full test class in Java that validates the `createProducer` method:"
         return sessionMode == JMSContext.SESSION_TRANSACTED;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public boolean getTransacted() {
-        return sessionMode == JMSContext.SESSION_TRANSACTED;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class in Java that validates the `getTransacted` method"
+Write a full test class with test cases to validate the method defined above.", public{{{{{}{{
 "@Override
     public void close() throws JMSException {
         if (ignoreClose) {
@@ -5323,92 +3679,7 @@ Here's a full test class in Java that validates the `getTransacted` method"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void close() throws JMSException {
-        if (ignoreClose) {
-            return;
-        }
-
-        if (closed.compareAndSet(false, true)) {
-            boolean invalidate = false;
-            try {
-                // lets reset the session
-                getInternalSession().setMessageListener(null);
-
-                // Close any consumers, producers and browsers that may have been created.
-                for (MessageConsumer consumer : consumers) {
-                    consumer.close();
-                }
-
-                for (QueueBrowser browser : browsers) {
-                    browser.close();
-                }
-
-                for (MessageProducer producer : producers) {
-                    producer.close();
-                }
-
-                consumers.clear();
-                producers.clear();
-                browsers.clear();
-
-                if (transactional && !isXa) {
-                    try {
-                        getInternalSession().rollback();
-                    } catch (JMSException e) {
-                        invalidate = true;
-                        LOG.warn(""Caught exception trying rollback() when putting session back into the pool, will invalidate. "" + e, e);
-                    }
-                }
-            } catch (JMSException ex) {
-                invalidate = true;
-                LOG.warn(""Caught exception trying close() when putting session back into the pool, will invalidate. "" + ex, ex);
-            } finally {
-                consumers.clear();
-                browsers.clear();
-                for (JmsPoolSessionEventListener listener : this.sessionEventListeners) {
-                    listener.onSessionClosed(this);
-                }
-                sessionEventListeners.clear();
-            }
-
-            if (invalidate) {
-                // lets close the session and not put the session back into the pool
-                // instead invalidate it so the pool can create a new one on demand.
-                if (sessionHolder != null) {
-                    try {
-                        sessionHolder.close();
-                    } catch (JMSException e1) {
-                        LOG.trace(""Ignoring exception on close as discarding session: "" + e1, e1);
-                    }
-                }
-
-                try {
-                    sessionPool.invalidateObject(key, sessionHolder);
-                } catch (Exception e) {
-                    LOG.trace(""Ignoring exception on invalidateObject as discarding session: "" + e, e);
-                }
-            } else {
-                try {
-                    sessionPool.returnObject(key, sessionHolder);
-                } catch (Exception e) {
-                    javax.jms.IllegalStateException illegalStateException = new javax.jms.IllegalStateException(e.toString());
-                    illegalStateException.initCause(e);
-                    throw illegalStateException;
-                }
-            }
-
-            sessionHolder = null;
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a test class in Java using JUnit:
-
-import static"
+Write a full test class with test cases to validate the method defined above.",( ) {( ) ;( ) ;( ) ;( )
 "@Override
     public JMSProducer clearProperties() {
         messageProperties.clear();
@@ -5434,17 +3705,7 @@ import static"
         return this;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer clearProperties() {
-        messageProperties.clear();
-        return this;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of how you might write a test class for the `clearProperties`"
+Write a full test class with test cases to validate the method defined above.", publicJMSProducerJMSProducerJMSProducerJMSProducer
 "public void addSessionEventListener(JmsPoolSessionEventListener listener) throws JMSException {
         checkClosed();
         if (!sessionEventListeners.contains(listener)) {
@@ -5502,20 +3763,7 @@ public void addSessionEventListener(JmsPoolSessionEventListener listener) throws
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public void addSessionEventListener(JmsPoolSessionEventListener listener) throws JMSException {
-        checkClosed();
-        if (!sessionEventListeners.contains(listener)) {
-            this.sessionEventListeners.add(listener);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import static org.junit.j"
+Write a full test class with test cases to validate the method defined above.",{{{{{{{}{
 "public static JMSException create(String message, Throwable cause) {
         if (cause instanceof JMSException) {
             return (JMSException) cause;
@@ -5568,37 +3816,8 @@ public static JMSException create(String message, Throwable cause) {
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static JMSException create(String message, Throwable cause) {
-        if (cause instanceof JMSException) {
-            return (JMSException) cause;
-        }
-
-        if (cause.getCause() instanceof JMSException) {
-            return (JMSException) cause.getCause();
-        }
-
-        if (message == null || message.isEmpty()) {
-            message = cause.getMessage();
-            if (message == null || message.isEmpty()) {
-                message = cause.toString();
-            }
-        }
-
-        JMSException exception = new JMSException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a test class in Java:
-
-import static org.junit.Assert.*;"
+Write a full test class with test cases to validate the method defined above.","{(Throwable cause) {cause.getCause();
+        }{"
 "@Override
     public void send(Message message) throws JMSException {
         send(message, deliveryMode, priority, timeToLive);
@@ -5619,16 +3838,7 @@ import static org.junit.Assert.*;"
         send(message, deliveryMode, priority, timeToLive);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public void send(Message message) throws JMSException {
-        send(message, deliveryMode, priority, timeToLive);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Sure, here is a full test class in Java using JUnit to validate the `send"
+Write a full test class with test cases to validate the method defined above.",public void{{......
 "@Override
     public JMSConsumer createDurableConsumer(Topic topic, String name) {
         try {
@@ -5658,20 +3868,7 @@ Sure, here is a full test class in Java using JUnit to validate the `send"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSConsumer createDurableConsumer(Topic topic, String name) {
-        try {
-            return startIfNeeded(new JmsPoolJMSConsumer((JmsPoolMessageConsumer) getSession().createDurableConsumer(topic, name)));
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-To write a full test class with test cases for the `createDurableConsumer` method"
+Write a full test class with test cases to validate the method defined above.",JMSConsumerImplJMSConsumerImplImplImplImplImplImplImplImplImplImpl
 "@Override
     public JMSProducer setProperty(String name, boolean value) {
         return setObjectProperty(name, value);
@@ -5690,16 +3887,7 @@ To write a full test class with test cases for the `createDurableConsumer` metho
         return setObjectProperty(name, value);
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer setProperty(String name, boolean value) {
-        return setObjectProperty(name, value);
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a full test class with test cases to validate the `setProperty` method:"
+Write a full test class with test cases to validate the method defined above.",JMSProducerJMSProducerJMSProducerJMSProducerJMS
 "public static MessageFormatException createMessageFormatException(Throwable cause) {
         String message = cause.getMessage();
         if (message == null || message.length() == 0) {
@@ -5732,27 +3920,7 @@ public static MessageFormatException createMessageFormatException(Throwable caus
         return exception;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static MessageFormatException createMessageFormatException(Throwable cause) {
-        String message = cause.getMessage();
-        if (message == null || message.length() == 0) {
-            message = cause.toString();
-        }
-
-        MessageFormatException exception = new MessageFormatException(message);
-        if (cause instanceof Exception) {
-            exception.setLinkedException((Exception) cause);
-        }
-        exception.initCause(cause);
-        return exception;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java:
-
-import org.junit.jupiter"
+Write a full test class with test cases to validate the method defined above.",public static{{{=( Throwable{( Throwable
 "public QueueReceiver getQueueReceiver() throws JMSException {
         return (QueueReceiver) super.getMessageConsumer();
     }","@Test
@@ -5777,15 +3945,7 @@ public QueueReceiver getQueueReceiver() throws JMSException {
         return (QueueReceiver) super.getMessageConsumer();
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public QueueReceiver getQueueReceiver() throws JMSException {
-        return (QueueReceiver) super.getMessageConsumer();
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that validates the `getQueueReceiver` method:"
+Write a full test class with test cases to validate the method defined above.",{{{{{}{{{
 "@Override
     public MapMessage createMapMessage() {
         try {
@@ -5814,20 +3974,7 @@ Here's a test class in Java that validates the `getQueueReceiver` method:"
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public MapMessage createMapMessage() {
-        try {
-            return getSession().createMapMessage();
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is a full test class in Java that validates the `createMapMessage` method:"
+Write a full test class with test cases to validate the method defined above.",{{{{{{{}{
 "public static void checkValidObject(Object value) throws MessageFormatException {
         boolean valid = value instanceof Boolean ||
                         value instanceof Byte ||
@@ -5865,28 +4012,7 @@ public static void checkValidObject(Object value) throws MessageFormatException 
         }
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-public static void checkValidObject(Object value) throws MessageFormatException {
-        boolean valid = value instanceof Boolean ||
-                        value instanceof Byte ||
-                        value instanceof Short ||
-                        value instanceof Integer ||
-                        value instanceof Long ||
-                        value instanceof Float ||
-                        value instanceof Double ||
-                        value instanceof Character ||
-                        value instanceof String ||
-                        value == null;
-
-        if (!valid) {
-            throw new MessageFormatException(""Only objectified primitive objects and String types are allowed but was: "" + value + "" type: "" + value.getClass());
-        }
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class in Java that uses JUnit to validate the `checkValid"
+Write a full test class with test cases to validate the method defined above.",.........
 "@Override
     public JMSProducer send(Destination destination, Message message) {
         try {
@@ -5932,24 +4058,7 @@ Here's a test class in Java that uses JUnit to validate the `checkValid"
         return this;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@Override
-    public JMSProducer send(Destination destination, Message message) {
-        try {
-            doSend(destination, message);
-        } catch (JMSException jmse) {
-            throw JMSExceptionSupport.createRuntimeException(jmse);
-        }
-
-        return this;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here is an example of a full test class in Java using JUnit:
-
-import"
+Write a full test class with test cases to validate the method defined above.",{{{{}{{}{
 "@SuppressWarnings(""unchecked"")
     public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
         if (value == null) {
@@ -5997,32 +4106,4 @@ import"
         return rc;
     }
 
-Write a full test class with test cases to validate the method defined above.","Here is a method implementation in Java:
-
-@SuppressWarnings(""unchecked"")
-    public static <T> T convertPropertyTo(String name, Object value, Class<T> target) throws JMSException {
-        if (value == null) {
-            if (Boolean.class.equals(target)) {
-                return (T) Boolean.FALSE;
-            } else if (Float.class.equals(target) || Double.class.equals(target)) {
-                throw new NullPointerException(""property "" + name + "" was null"");
-            } else if (Number.class.isAssignableFrom(target)) {
-                throw new NumberFormatException(""property "" + name + "" was null"");
-            } else {
-                return null;
-            }
-        }
-
-        T rc = (T) TypeConversionSupport.convert(value, target);
-        if (rc == null) {
-            throw new MessageFormatException(""Property "" + name + "" was a "" + value.getClass().getName() + "" and cannot be read as a "" + target.getName());
-        }
-
-        return rc;
-    }
-
-Write a full test class with test cases to validate the method defined above.
-
-Here's a test class for the `convertPropertyTo` method:
-
-import"
+Write a full test class with test cases to validate the method defined above.",{(String) name);if (String.class.isAssignableFrom(
