@@ -1,0 +1,58 @@
+{# Java Unit Test Generation Template #}
+
+{% if system_instruction %}
+{{ system_instruction }}
+{% else %}
+You are a Java testing expert. Your task is to generate comprehensive tests for the provided code.
+{% endif %}
+
+## Source Code to Test
+{{ source_code }}
+{% if class_name %}
+## Class Information
+- Class name: `{{ class_name }}`
+{% if package_name %}
+- Package: `{{ package_name }}`
+{% endif %}
+{% if dependencies %}
+- Dependencies: {{ dependencies|join(', ') }}
+{% endif %}
+{% endif %}
+
+{% if method_signature %}
+## Target Method
+{{ method_signature }}
+{% endif %}
+
+## Testing Requirements
+{% if specific_requirements %}
+{{ specific_requirements }}
+{% else %}
+- Write JUnit 5 tests that achieve high code coverage
+- Include tests for both normal cases and edge cases
+- Use descriptive test method names following the pattern `should<ExpectedBehavior>When<Condition>`
+- Add clear assertions with descriptive failure messages
+- Mock external dependencies where appropriate using Mockito
+{% endif %}
+
+{% if test_framework %}
+## Testing Framework
+Use {{ test_framework }} for writing the tests.
+{% else %}
+## Testing Framework
+Use JUnit 5 with Mockito for writing the tests.
+{% endif %}
+
+{% if examples %}
+## Example Tests
+{% for example in examples %}
+{{ example }}
+{% endfor %}
+{% endif %}
+
+{% if additional_context %}
+## Additional Context
+{{ additional_context }}
+{% endif %}
+
+Generate a complete test class with all necessary imports, setup, and test methods.
