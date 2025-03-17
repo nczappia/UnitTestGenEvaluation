@@ -1,0 +1,10 @@
+For Creating Java Test Set:
+* Creating both Few Shot and Zero Shot prompts
+* Using triangle area (index 45) as few shot for all
+    * For traingle area (index 45) the add method (index 53) is used
+* Using full definitions up until the unit tests are created
+    * Full class and function definitions provided, but that's it
+* Examples with other starts to test methods:
+    * [38, 50]: Create char array of lowercase alphabet and Random for random_string method
+        * random_string is fully defined, and then the main (test) method is initialized
+    * [162]: Just includes NoSuchAlgorithmException declaration after main method declaration and before closing bracket
