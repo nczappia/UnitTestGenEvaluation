@@ -28,13 +28,13 @@ def save_responses(df):
 
 
 def main(args):
-    print("Creatign BAB config")
-    # config
-    bnb_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-    )
+    # print("Creatign BAB config")
+    # # config
+    # bnb_config = BitsAndBytesConfig(
+    #     load_in_4bit=True,
+    #     bnb_4bit_quant_type="nf4",
+    #     bnb_4bit_compute_dtype=torch.bfloat16,
+    # )
 
     print("Loading Tokenizer")
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
@@ -44,7 +44,7 @@ def main(args):
         print("Seq2Seq Model")
         model = AutoModelForSeq2SeqLM.from_pretrained(
             args.model_id,
-            quantization_config=bnb_config,
+            #quantization_config=bnb_config,
             trust_remote_code=True,
             low_cpu_mem_usage=True,
         )
@@ -52,7 +52,7 @@ def main(args):
         print("CausalLM Model")
         model = AutoModelForCausalLM.from_pretrained(
             args.model_id,
-            quantization_config=bnb_config,
+            #quantization_config=bnb_config,
             trust_remote_code=True,
             low_cpu_mem_usage=True,
         )
@@ -116,7 +116,10 @@ def main(args):
     with open(args.prompt_output_dir + "timing.txt", "a") as f:
         f.write(f"Total generation time (seconds) for {args.model_id}: {total_time}\n")
 
+    #Save responses
     print(f"Saved responses to {output_file}.")
+
+    #Finish timing
     print(f"Total time: {total_time:.2f} seconds")
 
 if __name__ == "__main__":

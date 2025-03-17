@@ -1,4 +1,5 @@
 MODEL_IDS=("Salesforce/codet5-base"  "Salesforce/codegen2-1B_P" "bigcode/starcoder2-3b"  "bigcode/santacoder")
+#SUBSETS=("cpp", "go", "java", "js", "python")
 
 #Currently using human eval x java dataset in the experiment
 for MODEL_ID in "${MODEL_IDS[@]}"
