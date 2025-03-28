@@ -1,0 +1,491 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "List",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Boolean",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "correct",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": "MethodInvocation",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "Arrays",
+                    "selectors": [],
+                    "type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "148"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "412"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "16"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "19"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "28"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "72"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "2020"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "1851"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "0"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "14"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [
+                                "-"
+                              ],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "15"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "20"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "76"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "67"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "42"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "17"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "27"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "49"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "0"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "1"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "0"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "0"
+                            },
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "0"
+                            }
+                          ],
+                          "member": "multiply"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "0"
+                        }
+                      }
+                    ],
+                    "member": "asList"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "label": null,
+              "condition": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "correct",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "false"
+                  }
+                ],
+                "member": "contains"
+              },
+              "then_statement": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "ThrowStatement",
+                    "label": null,
+                    "expression": {
+                      "type": {
+                        "type": "ReferenceType",
+                        "name": "AssertionError",
+                        "dimensions": null,
+                        "arguments": null,
+                        "sub_type": null
+                      },
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": null,
+                      "selectors": [],
+                      "constructor_type_arguments": null,
+                      "arguments": [],
+                      "body": null
+                    }
+                  }
+                ]
+              },
+              "else_statement": null
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

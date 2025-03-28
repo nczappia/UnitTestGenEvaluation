@@ -1,0 +1,890 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "List",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Boolean",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "correct",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": "MethodInvocation",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "Arrays",
+                    "selectors": [],
+                    "type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"Watashi\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"tEN\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"niNE\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"eIGHt8OKe\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"Watashi.eIGHt8OKe\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"Boku123\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"nani\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"NazeDa\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"YEs.WeCaNe\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"32145tggg\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"Boku123.YEs.WeCaNe\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"__YESIMHERE\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"t\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"eMptY\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"nothing\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"zeR00\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"NuLl__\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"123NoooneB321\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"__YESIMHERE.NuLl__\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"K\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Ta\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"TAR\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"t234An\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"cosSo\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"K.TAR\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"__HAHA\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Tab\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"123\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"781345\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"-_-\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"__HAHA.123\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"YameRore\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"HhAas\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"okIWILL123\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"WorkOut\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Fails\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"-_-\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"YameRore.okIWILL123\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"finNNalLLly\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Die\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"NowW\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Wow\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"WoW\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"finNNalLLly.WoW\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"_\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Bb\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"91245\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"_.Bb\""
+                          }
+                        ],
+                        "member": "equals"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Objects",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"Sp\""
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"671235\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"Bb\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "StrongestExtension"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"Sp.671235\""
+                          }
+                        ],
+                        "member": "equals"
+                      }
+                    ],
+                    "member": "asList"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "label": null,
+              "condition": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "correct",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "false"
+                  }
+                ],
+                "member": "contains"
+              },
+              "then_statement": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "ThrowStatement",
+                    "label": null,
+                    "expression": {
+                      "type": {
+                        "type": "ReferenceType",
+                        "name": "AssertionError",
+                        "dimensions": null,
+                        "arguments": null,
+                        "sub_type": null
+                      },
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": null,
+                      "selectors": [],
+                      "constructor_type_arguments": null,
+                      "arguments": [],
+                      "body": null
+                    }
+                  }
+                ]
+              },
+              "else_statement": null
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

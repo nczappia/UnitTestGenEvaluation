@@ -1,0 +1,425 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "List",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Boolean",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "correct",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": "MethodInvocation",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "Arrays",
+                    "selectors": [],
+                    "type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "0"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"abAB\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "131"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"abcCd\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "67"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"helloE\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "69"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"woArBld\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "131"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"aAaaaXa\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "153"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\" How are yOu?\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "151"
+                        }
+                      },
+                      {
+                        "type": "BinaryOperation",
+                        "operator": "==",
+                        "operandl": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "\"You arE Very Smart\""
+                            }
+                          ],
+                          "member": "digitSum"
+                        },
+                        "operandr": {
+                          "type": "Literal",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "value": "327"
+                        }
+                      }
+                    ],
+                    "member": "asList"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "label": null,
+              "condition": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "correct",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "false"
+                  }
+                ],
+                "member": "contains"
+              },
+              "then_statement": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "ThrowStatement",
+                    "label": null,
+                    "expression": {
+                      "type": {
+                        "type": "ReferenceType",
+                        "name": "AssertionError",
+                        "dimensions": null,
+                        "arguments": null,
+                        "sub_type": null
+                      },
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": null,
+                      "selectors": [],
+                      "constructor_type_arguments": null,
+                      "arguments": [],
+                      "body": null
+                    }
+                  }
+                ]
+              },
+              "else_statement": null
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

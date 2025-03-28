@@ -1,0 +1,608 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": {
+            "type": "BasicType",
+            "name": "char",
+            "dimensions": [
+              null
+            ]
+          },
+          "documentation": null,
+          "modifiers": [
+            "static"
+          ],
+          "annotations": [],
+          "declarators": [
+            {
+              "type": "VariableDeclarator",
+              "name": "letters",
+              "dimensions": [],
+              "initializer": {
+                "type": "Literal",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": null,
+                "selectors": [
+                  {
+                    "type": "MethodInvocation",
+                    "prefix_operators": null,
+                    "postfix_operators": null,
+                    "qualifier": null,
+                    "selectors": null,
+                    "type_arguments": null,
+                    "arguments": [],
+                    "member": "toCharArray"
+                  }
+                ],
+                "value": "\"abcdefghijklmnopqrstuvwxyz\""
+              }
+            }
+          ]
+        },
+        {
+          "type": {
+            "type": "ReferenceType",
+            "name": "Random",
+            "dimensions": [],
+            "arguments": null,
+            "sub_type": null
+          },
+          "documentation": null,
+          "modifiers": [
+            "static"
+          ],
+          "annotations": [],
+          "declarators": [
+            {
+              "type": "VariableDeclarator",
+              "name": "rand",
+              "dimensions": [],
+              "initializer": {
+                "type": {
+                  "type": "ReferenceType",
+                  "name": "Random",
+                  "dimensions": null,
+                  "arguments": null,
+                  "sub_type": null
+                },
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": null,
+                "selectors": [],
+                "constructor_type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "42"
+                  }
+                ],
+                "body": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": {
+            "type": "ReferenceType",
+            "name": "String",
+            "dimensions": [],
+            "arguments": null,
+            "sub_type": null
+          },
+          "name": "random_string",
+          "parameters": [
+            {
+              "type": {
+                "type": "BasicType",
+                "name": "int",
+                "dimensions": []
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "length",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "StringBuilder",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "sb",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "StringBuilder",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "ForStatement",
+              "label": null,
+              "control": {
+                "type": "ForControl",
+                "init": {
+                  "type": {
+                    "type": "BasicType",
+                    "name": "int",
+                    "dimensions": []
+                  },
+                  "modifiers": [],
+                  "annotations": [],
+                  "declarators": [
+                    {
+                      "type": "VariableDeclarator",
+                      "name": "i",
+                      "dimensions": null,
+                      "initializer": {
+                        "type": "Literal",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": null,
+                        "selectors": [],
+                        "value": "0"
+                      }
+                    }
+                  ]
+                },
+                "condition": {
+                  "type": "BinaryOperation",
+                  "operator": "<",
+                  "operandl": {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "i"
+                  },
+                  "operandr": {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "length"
+                  }
+                },
+                "update": [
+                  {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [
+                      "++"
+                    ],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "i"
+                  }
+                ]
+              },
+              "body": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "StatementExpression",
+                    "label": null,
+                    "expression": {
+                      "type": "MethodInvocation",
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": "sb",
+                      "selectors": [],
+                      "type_arguments": null,
+                      "arguments": [
+                        {
+                          "type": "MemberReference",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "",
+                          "selectors": [
+                            {
+                              "type": "ArraySelector",
+                              "index": {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "rand",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "26"
+                                  }
+                                ],
+                                "member": "nextInt"
+                              }
+                            }
+                          ],
+                          "member": "letters"
+                        }
+                      ],
+                      "member": "append"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "ReturnStatement",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "sb",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [],
+                "member": "toString"
+              }
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "ForStatement",
+              "label": null,
+              "control": {
+                "type": "ForControl",
+                "init": {
+                  "type": {
+                    "type": "BasicType",
+                    "name": "int",
+                    "dimensions": []
+                  },
+                  "modifiers": [],
+                  "annotations": [],
+                  "declarators": [
+                    {
+                      "type": "VariableDeclarator",
+                      "name": "i",
+                      "dimensions": null,
+                      "initializer": {
+                        "type": "Literal",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": null,
+                        "selectors": [],
+                        "value": "0"
+                      }
+                    }
+                  ]
+                },
+                "condition": {
+                  "type": "BinaryOperation",
+                  "operator": "<",
+                  "operandl": {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "i"
+                  },
+                  "operandr": {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "100"
+                  }
+                },
+                "update": [
+                  {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [
+                      "++"
+                    ],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "i"
+                  }
+                ]
+              },
+              "body": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "modifiers": [],
+                    "annotations": [],
+                    "declarators": [
+                      {
+                        "type": "VariableDeclarator",
+                        "name": "str",
+                        "dimensions": [],
+                        "initializer": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "BinaryOperation",
+                              "operator": "+",
+                              "operandl": {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "rand",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "10"
+                                  }
+                                ],
+                                "member": "nextInt"
+                              },
+                              "operandr": {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "10"
+                              }
+                            }
+                          ],
+                          "member": "random_string"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "modifiers": [],
+                    "annotations": [],
+                    "declarators": [
+                      {
+                        "type": "VariableDeclarator",
+                        "name": "encode_str",
+                        "dimensions": [],
+                        "initializer": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "MemberReference",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": "",
+                              "selectors": [],
+                              "member": "str"
+                            }
+                          ],
+                          "member": "encodeCyclic"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "IfStatement",
+                    "label": null,
+                    "condition": {
+                      "type": "MethodInvocation",
+                      "prefix_operators": [
+                        "!"
+                      ],
+                      "postfix_operators": [],
+                      "qualifier": "s",
+                      "selectors": [
+                        {
+                          "type": "MethodInvocation",
+                          "prefix_operators": null,
+                          "postfix_operators": null,
+                          "qualifier": null,
+                          "selectors": null,
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "MemberReference",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": "",
+                              "selectors": [],
+                              "member": "str"
+                            }
+                          ],
+                          "member": "equals"
+                        }
+                      ],
+                      "type_arguments": null,
+                      "arguments": [
+                        {
+                          "type": "MemberReference",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "",
+                          "selectors": [],
+                          "member": "encode_str"
+                        }
+                      ],
+                      "member": "decodeCyclic"
+                    },
+                    "then_statement": {
+                      "type": "BlockStatement",
+                      "label": null,
+                      "statements": [
+                        {
+                          "type": "ThrowStatement",
+                          "label": null,
+                          "expression": {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "AssertionError",
+                              "dimensions": null,
+                              "arguments": null,
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [],
+                            "body": null
+                          }
+                        }
+                      ]
+                    },
+                    "else_statement": null
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+/**
+    Concatenate list of strings into a single string
+    >>> concatenate(List.of())
+    ""
+    >>> concatenate(Arrays.asList("a", "b", "c"))
+    "abc"
+     */

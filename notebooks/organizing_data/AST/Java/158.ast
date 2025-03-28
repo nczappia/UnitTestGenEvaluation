@@ -1,0 +1,1031 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "List",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Boolean",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "correct",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": "MethodInvocation",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "Arrays",
+                    "selectors": [],
+                    "type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"string\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"name\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"of\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"string\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"enam\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"name\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"enam\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"game\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"aaaaaaa\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"aaaaaaa\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"bb\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"cc\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"abc\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"abc\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"cba\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"footbott\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"play\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"this\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"game\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"of\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"footbott\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"gonna\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"we\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"are\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"gonna\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"rock\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"nation\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"we\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"are\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"a\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"mad\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"nation\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"this\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"this\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"is\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"a\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"prrk\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"b\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "List",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"b\""
+                                  }
+                                ],
+                                "member": "of"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": null,
+                                "selectors": [],
+                                "value": "\"play\""
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "ArrayList",
+                              "dimensions": null,
+                              "arguments": [],
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"play\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"play\""
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "\"play\""
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "body": null
+                          }
+                        ],
+                        "member": "findMax"
+                      }
+                    ],
+                    "member": "asList"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "label": null,
+              "condition": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "correct",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "false"
+                  }
+                ],
+                "member": "contains"
+              },
+              "then_statement": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "ThrowStatement",
+                    "label": null,
+                    "expression": {
+                      "type": {
+                        "type": "ReferenceType",
+                        "name": "AssertionError",
+                        "dimensions": null,
+                        "arguments": null,
+                        "sub_type": null
+                      },
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": null,
+                      "selectors": [],
+                      "constructor_type_arguments": null,
+                      "arguments": [],
+                      "body": null
+                    }
+                  }
+                ]
+              },
+              "else_statement": null
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

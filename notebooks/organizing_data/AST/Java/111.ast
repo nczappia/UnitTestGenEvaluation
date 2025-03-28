@@ -1,0 +1,1456 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map1",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map1",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"a\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "2"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map1",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"b\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "2"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map2",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map2",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"a\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "2"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map2",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"b\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "2"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map3",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map3",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"a\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map3",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"b\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map3",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"c\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map3",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"d\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map3",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"g\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map4",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map4",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"r\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map4",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"t\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map4",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"g\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map5",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map5",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"b\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "4"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map6",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map6",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"r\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map6",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"t\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map6",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"g\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map7",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Map",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "String",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Integer",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "map8",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "HashMap",
+                      "dimensions": null,
+                      "arguments": [],
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "StatementExpression",
+              "label": null,
+              "expression": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "map8",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "\"a\""
+                  },
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "1"
+                  }
+                ],
+                "member": "put"
+              }
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "List",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Boolean",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "correct",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": "MethodInvocation",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "Arrays",
+                    "selectors": [],
+                    "type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map1"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"a b b a\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map2"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"a b c a b\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map3"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"a b c d g\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map4"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"r t g\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map5"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"b b b b a\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map6"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"r t g\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map7"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"\""
+                          }
+                        ],
+                        "member": "histogram"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "map8"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "\"a\""
+                          }
+                        ],
+                        "member": "histogram"
+                      }
+                    ],
+                    "member": "asList"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "label": null,
+              "condition": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "correct",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "false"
+                  }
+                ],
+                "member": "contains"
+              },
+              "then_statement": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "ThrowStatement",
+                    "label": null,
+                    "expression": {
+                      "type": {
+                        "type": "ReferenceType",
+                        "name": "AssertionError",
+                        "dimensions": null,
+                        "arguments": null,
+                        "sub_type": null
+                      },
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": null,
+                      "selectors": [],
+                      "constructor_type_arguments": null,
+                      "arguments": [],
+                      "body": null
+                    }
+                  }
+                ]
+              },
+              "else_statement": null
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

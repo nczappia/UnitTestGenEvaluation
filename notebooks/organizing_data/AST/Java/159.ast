@@ -1,0 +1,621 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "List",
+                "dimensions": [],
+                "arguments": [
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Boolean",
+                      "dimensions": [],
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "pattern_type": null
+                  }
+                ],
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "correct",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": "MethodInvocation",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "Arrays",
+                    "selectors": [],
+                    "type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "11"
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "4"
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "5"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "6"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "10"
+                          }
+                        ],
+                        "member": "eat"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "12"
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "1"
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "4"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "8"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "9"
+                          }
+                        ],
+                        "member": "eat"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "11"
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "0"
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "1"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "10"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "10"
+                          }
+                        ],
+                        "member": "eat"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "7"
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "0"
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "2"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "11"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "5"
+                          }
+                        ],
+                        "member": "eat"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "9"
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "2"
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "4"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "5"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "7"
+                          }
+                        ],
+                        "member": "eat"
+                      },
+                      {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "s",
+                        "selectors": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": null,
+                            "postfix_operators": null,
+                            "qualifier": null,
+                            "selectors": null,
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MethodInvocation",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "Arrays",
+                                "selectors": [],
+                                "type_arguments": null,
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "5"
+                                  },
+                                  {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "0"
+                                  }
+                                ],
+                                "member": "asList"
+                              }
+                            ],
+                            "member": "equals"
+                          }
+                        ],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "4"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "5"
+                          },
+                          {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "1"
+                          }
+                        ],
+                        "member": "eat"
+                      }
+                    ],
+                    "member": "asList"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "label": null,
+              "condition": {
+                "type": "MethodInvocation",
+                "prefix_operators": [],
+                "postfix_operators": [],
+                "qualifier": "correct",
+                "selectors": [],
+                "type_arguments": null,
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "false"
+                  }
+                ],
+                "member": "contains"
+              },
+              "then_statement": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": "ThrowStatement",
+                    "label": null,
+                    "expression": {
+                      "type": {
+                        "type": "ReferenceType",
+                        "name": "AssertionError",
+                        "dimensions": null,
+                        "arguments": null,
+                        "sub_type": null
+                      },
+                      "prefix_operators": [],
+                      "postfix_operators": [],
+                      "qualifier": null,
+                      "selectors": [],
+                      "constructor_type_arguments": null,
+                      "arguments": [],
+                      "body": null
+                    }
+                  }
+                ]
+              },
+              "else_statement": null
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}

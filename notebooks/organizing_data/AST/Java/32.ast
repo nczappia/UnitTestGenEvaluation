@@ -1,0 +1,619 @@
+{
+  "type": "CompilationUnit",
+  "package": null,
+  "imports": [],
+  "types": [
+    {
+      "type": "ClassDeclaration",
+      "modifiers": [
+        "public"
+      ],
+      "annotations": [],
+      "documentation": null,
+      "name": "Main",
+      "body": [
+        {
+          "type": "MethodDeclaration",
+          "documentation": null,
+          "modifiers": [
+            "static",
+            "public"
+          ],
+          "annotations": [],
+          "type_parameters": null,
+          "return_type": null,
+          "name": "main",
+          "parameters": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "String",
+                "dimensions": [
+                  null
+                ],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "name": "args",
+              "varargs": false
+            }
+          ],
+          "throws": null,
+          "body": [
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Solution",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "s",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Solution",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": {
+                "type": "ReferenceType",
+                "name": "Random",
+                "dimensions": [],
+                "arguments": null,
+                "sub_type": null
+              },
+              "modifiers": [],
+              "annotations": [],
+              "declarators": [
+                {
+                  "type": "VariableDeclarator",
+                  "name": "rand",
+                  "dimensions": [],
+                  "initializer": {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "Random",
+                      "dimensions": null,
+                      "arguments": null,
+                      "sub_type": null
+                    },
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "constructor_type_arguments": null,
+                    "arguments": [
+                      {
+                        "type": "Literal",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": null,
+                        "selectors": [],
+                        "value": "42"
+                      }
+                    ],
+                    "body": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "ForStatement",
+              "label": null,
+              "control": {
+                "type": "ForControl",
+                "init": {
+                  "type": {
+                    "type": "BasicType",
+                    "name": "int",
+                    "dimensions": []
+                  },
+                  "modifiers": [],
+                  "annotations": [],
+                  "declarators": [
+                    {
+                      "type": "VariableDeclarator",
+                      "name": "i",
+                      "dimensions": null,
+                      "initializer": {
+                        "type": "Literal",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": null,
+                        "selectors": [],
+                        "value": "0"
+                      }
+                    }
+                  ]
+                },
+                "condition": {
+                  "type": "BinaryOperation",
+                  "operator": "<",
+                  "operandl": {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "i"
+                  },
+                  "operandr": {
+                    "type": "Literal",
+                    "prefix_operators": [],
+                    "postfix_operators": [],
+                    "qualifier": null,
+                    "selectors": [],
+                    "value": "100"
+                  }
+                },
+                "update": [
+                  {
+                    "type": "MemberReference",
+                    "prefix_operators": [],
+                    "postfix_operators": [
+                      "++"
+                    ],
+                    "qualifier": "",
+                    "selectors": [],
+                    "member": "i"
+                  }
+                ]
+              },
+              "body": {
+                "type": "BlockStatement",
+                "label": null,
+                "statements": [
+                  {
+                    "type": {
+                      "type": "BasicType",
+                      "name": "int",
+                      "dimensions": []
+                    },
+                    "modifiers": [],
+                    "annotations": [],
+                    "declarators": [
+                      {
+                        "type": "VariableDeclarator",
+                        "name": "ncoeff",
+                        "dimensions": [],
+                        "initializer": {
+                          "type": "BinaryOperation",
+                          "operator": "*",
+                          "operandl": {
+                            "type": "Literal",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "value": "2"
+                          },
+                          "operandr": {
+                            "type": "BinaryOperation",
+                            "operator": "+",
+                            "operandl": {
+                              "type": "MethodInvocation",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": "rand",
+                              "selectors": [],
+                              "type_arguments": null,
+                              "arguments": [
+                                {
+                                  "type": "Literal",
+                                  "prefix_operators": [],
+                                  "postfix_operators": [],
+                                  "qualifier": null,
+                                  "selectors": [],
+                                  "value": "3"
+                                }
+                              ],
+                              "member": "nextInt"
+                            },
+                            "operandr": {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "1"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": {
+                      "type": "ReferenceType",
+                      "name": "List",
+                      "dimensions": [],
+                      "arguments": [
+                        {
+                          "type": {
+                            "type": "ReferenceType",
+                            "name": "Double",
+                            "dimensions": [],
+                            "arguments": null,
+                            "sub_type": null
+                          },
+                          "pattern_type": null
+                        }
+                      ],
+                      "sub_type": null
+                    },
+                    "modifiers": [],
+                    "annotations": [],
+                    "declarators": [
+                      {
+                        "type": "VariableDeclarator",
+                        "name": "coeffs",
+                        "dimensions": [],
+                        "initializer": {
+                          "type": {
+                            "type": "ReferenceType",
+                            "name": "ArrayList",
+                            "dimensions": null,
+                            "arguments": [],
+                            "sub_type": null
+                          },
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": null,
+                          "selectors": [],
+                          "constructor_type_arguments": null,
+                          "arguments": [],
+                          "body": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ForStatement",
+                    "label": null,
+                    "control": {
+                      "type": "ForControl",
+                      "init": {
+                        "type": {
+                          "type": "BasicType",
+                          "name": "int",
+                          "dimensions": []
+                        },
+                        "modifiers": [],
+                        "annotations": [],
+                        "declarators": [
+                          {
+                            "type": "VariableDeclarator",
+                            "name": "j",
+                            "dimensions": null,
+                            "initializer": {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "0"
+                            }
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "type": "BinaryOperation",
+                        "operator": "<",
+                        "operandl": {
+                          "type": "MemberReference",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "",
+                          "selectors": [],
+                          "member": "j"
+                        },
+                        "operandr": {
+                          "type": "MemberReference",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "",
+                          "selectors": [],
+                          "member": "ncoeff"
+                        }
+                      },
+                      "update": [
+                        {
+                          "type": "MemberReference",
+                          "prefix_operators": [],
+                          "postfix_operators": [
+                            "++"
+                          ],
+                          "qualifier": "",
+                          "selectors": [],
+                          "member": "j"
+                        }
+                      ]
+                    },
+                    "body": {
+                      "type": "BlockStatement",
+                      "label": null,
+                      "statements": [
+                        {
+                          "type": {
+                            "type": "BasicType",
+                            "name": "int",
+                            "dimensions": []
+                          },
+                          "modifiers": [],
+                          "annotations": [],
+                          "declarators": [
+                            {
+                              "type": "VariableDeclarator",
+                              "name": "coeff",
+                              "dimensions": [],
+                              "initializer": {
+                                "type": "BinaryOperation",
+                                "operator": "-",
+                                "operandl": {
+                                  "type": "MethodInvocation",
+                                  "prefix_operators": [],
+                                  "postfix_operators": [],
+                                  "qualifier": "rand",
+                                  "selectors": [],
+                                  "type_arguments": null,
+                                  "arguments": [
+                                    {
+                                      "type": "Literal",
+                                      "prefix_operators": [],
+                                      "postfix_operators": [],
+                                      "qualifier": null,
+                                      "selectors": [],
+                                      "value": "20"
+                                    }
+                                  ],
+                                  "member": "nextInt"
+                                },
+                                "operandr": {
+                                  "type": "Literal",
+                                  "prefix_operators": [],
+                                  "postfix_operators": [],
+                                  "qualifier": null,
+                                  "selectors": [],
+                                  "value": "10"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "IfStatement",
+                          "label": null,
+                          "condition": {
+                            "type": "BinaryOperation",
+                            "operator": "==",
+                            "operandl": {
+                              "type": "MemberReference",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": "",
+                              "selectors": [],
+                              "member": "coeff"
+                            },
+                            "operandr": {
+                              "type": "Literal",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": null,
+                              "selectors": [],
+                              "value": "0"
+                            }
+                          },
+                          "then_statement": {
+                            "type": "BlockStatement",
+                            "label": null,
+                            "statements": [
+                              {
+                                "type": "StatementExpression",
+                                "label": null,
+                                "expression": {
+                                  "type": "=",
+                                  "expressionl": {
+                                    "type": "MemberReference",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": "",
+                                    "selectors": [],
+                                    "member": "coeff"
+                                  },
+                                  "value": {
+                                    "type": "Literal",
+                                    "prefix_operators": [],
+                                    "postfix_operators": [],
+                                    "qualifier": null,
+                                    "selectors": [],
+                                    "value": "1"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "else_statement": null
+                        },
+                        {
+                          "type": "StatementExpression",
+                          "label": null,
+                          "expression": {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "coeffs",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": {
+                                  "type": "BasicType",
+                                  "name": "double",
+                                  "dimensions": []
+                                },
+                                "expression": {
+                                  "type": "MemberReference",
+                                  "prefix_operators": [],
+                                  "postfix_operators": [],
+                                  "qualifier": "",
+                                  "selectors": [],
+                                  "member": "coeff"
+                                }
+                              }
+                            ],
+                            "member": "add"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": {
+                      "type": "BasicType",
+                      "name": "double",
+                      "dimensions": []
+                    },
+                    "modifiers": [],
+                    "annotations": [],
+                    "declarators": [
+                      {
+                        "type": "VariableDeclarator",
+                        "name": "solution",
+                        "dimensions": [],
+                        "initializer": {
+                          "type": "MethodInvocation",
+                          "prefix_operators": [],
+                          "postfix_operators": [],
+                          "qualifier": "s",
+                          "selectors": [],
+                          "type_arguments": null,
+                          "arguments": [
+                            {
+                              "type": "MemberReference",
+                              "prefix_operators": [],
+                              "postfix_operators": [],
+                              "qualifier": "",
+                              "selectors": [],
+                              "member": "coeffs"
+                            }
+                          ],
+                          "member": "findZero"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "IfStatement",
+                    "label": null,
+                    "condition": {
+                      "type": "BinaryOperation",
+                      "operator": ">",
+                      "operandl": {
+                        "type": "MethodInvocation",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": "Math",
+                        "selectors": [],
+                        "type_arguments": null,
+                        "arguments": [
+                          {
+                            "type": "MethodInvocation",
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": "s",
+                            "selectors": [],
+                            "type_arguments": null,
+                            "arguments": [
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "coeffs"
+                              },
+                              {
+                                "type": "MemberReference",
+                                "prefix_operators": [],
+                                "postfix_operators": [],
+                                "qualifier": "",
+                                "selectors": [],
+                                "member": "solution"
+                              }
+                            ],
+                            "member": "poly"
+                          }
+                        ],
+                        "member": "abs"
+                      },
+                      "operandr": {
+                        "type": "Literal",
+                        "prefix_operators": [],
+                        "postfix_operators": [],
+                        "qualifier": null,
+                        "selectors": [],
+                        "value": "1e-4"
+                      }
+                    },
+                    "then_statement": {
+                      "type": "BlockStatement",
+                      "label": null,
+                      "statements": [
+                        {
+                          "type": "ThrowStatement",
+                          "label": null,
+                          "expression": {
+                            "type": {
+                              "type": "ReferenceType",
+                              "name": "AssertionError",
+                              "dimensions": null,
+                              "arguments": null,
+                              "sub_type": null
+                            },
+                            "prefix_operators": [],
+                            "postfix_operators": [],
+                            "qualifier": null,
+                            "selectors": [],
+                            "constructor_type_arguments": null,
+                            "arguments": [],
+                            "body": null
+                          }
+                        }
+                      ]
+                    },
+                    "else_statement": null
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "type_parameters": null,
+      "extends": null,
+      "implements": null
+    }
+  ]
+}
