@@ -7,7 +7,7 @@ import time
 import torch
 
 
-from transformers import BitsAndBytesConfig, AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 from datasets import Dataset, load_dataset
 
 
@@ -19,7 +19,7 @@ def get_args():
     parser.add_argument("--prompt_column", type=str, default = "prompt")
     #parser.add_argument("--batch_size", type=int, default = 16)
     parser.add_argument("--prompt_output_dir", type=str, default="../../data/results")
-    parser.add_argument("--max_new_tokens", type=int, default = 400)
+    parser.add_argument("--max_new_tokens", type=int, default = 300)
     parser.add_argument("--device", type = str, default="cpu")
     return parser.parse_args()
 
@@ -28,13 +28,6 @@ def save_responses(df):
 
 
 def main(args):
-    # print("Creatign BAB config")
-    # # config
-    # bnb_config = BitsAndBytesConfig(
-    #     load_in_4bit=True,
-    #     bnb_4bit_quant_type="nf4",
-    #     bnb_4bit_compute_dtype=torch.bfloat16,
-    # )
 
     print("Loading Tokenizer")
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
@@ -44,18 +37,29 @@ def main(args):
         print("Seq2Seq Model")
         model = AutoModelForSeq2SeqLM.from_pretrained(
             args.model_id,
-            #quantization_config=bnb_config,
             trust_remote_code=True,
             low_cpu_mem_usage=True,
         )
     else:
         print("CausalLM Model")
-        model = AutoModelForCausalLM.from_pretrained(
-            args.model_id,
-            #quantization_config=bnb_config,
-            trust_remote_code=True,
-            low_cpu_mem_usage=True,
-        )
+        if(args.model_id == "deepseek-ai/DeepSeek-Coder-V2-Lite-Base"):
+
+            print("Quantizing Model to 8 bits")
+            from transformers import BitsAndBytesConfig
+            bnb_config = BitsAndBytesConfig(load_in_8bit=True)
+
+            model = AutoModelForCausalLM.from_pretrained("deepseek-ai/DeepSeek-Coder-V2-Lite-Base", 
+                trust_remote_code=True,
+                quantization_config = bnb_config
+            )  
+
+        else: 
+            print("CausalLM Model")
+            model = AutoModelForCausalLM.from_pretrained(
+                args.model_id,
+                trust_remote_code=True,
+                low_cpu_mem_usage=True,
+            )
 
     model.to(args.device)
     
@@ -80,7 +84,9 @@ def main(args):
 
     model_name = args.model_id.split('/')[1]
 
-    response_dir = f"{args.prompt_output_dir}/{model_name}__{args.dataset_location.split('/')[-1]}"
+    dataset_name = args.dataset_location.split('/')[-1][:-4] #Trims .csv
+
+    response_dir = f"{args.prompt_output_dir}/{model_name}__{dataset_name}"
 
     os.mkdir(response_dir)
 
@@ -91,7 +97,7 @@ def main(args):
 
     # Save timing info
     with open(args.prompt_output_dir + "timing.txt", "a") as f:
-        f.write(f"Total generation time (seconds) for {args.model_id}: {total_time}\n")
+        f.write(f"Total generation time (seconds) for {model_name} on dataset {dataset_name}: {total_time}\n")
 
     #Save responses
     print(f"Saved responses to {output_file}.")

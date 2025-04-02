@@ -20,3 +20,6 @@ class Solution {
 
     
     public String decodeCyclic(String s) {
+        return encodeCyclic(encodeCyclic(s));
+    }
+}

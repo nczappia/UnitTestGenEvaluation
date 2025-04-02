@@ -20,9 +20,16 @@
 #     done
 # done
 
-MODEL_IDS=("bigcode/starcoder2-3b")
+MODEL_IDS=(
+  "bigcode/starcoder2-3b"
+  "Salesforce/codet5p-2b"
+  "codellama/CodeLlama-7b-Instruct-hf"
+  "deepseek-ai/DeepSeek-Coder-V2-Lite-Base"
+  "Salesforce/codet5-base"
+  )
+  
 DATASET_LOCATIONS=(
-  #"/media/mujtaba/DATA/nick/UnitTestExamples/data/prompts/humanevalx/few_shot_first_prompts.csv"
+  "/media/mujtaba/DATA/nick/UnitTestExamples/data/prompts/humanevalx/few_shot_first_prompts.csv"
   "/media/mujtaba/DATA/nick/UnitTestExamples/data/prompts/humanevalx/zero_shot_first_prompts.csv"
 )
 
