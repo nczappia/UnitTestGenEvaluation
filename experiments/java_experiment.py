@@ -33,13 +33,13 @@ def main(args):
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
 
     print("Loading Model")
-    if (args.model_id == "Salesforce/codet5-base"):
+    if (args.model_id.split('/')[0] == "Salesforce"):
         print("Seq2Seq Model")
         model = AutoModelForSeq2SeqLM.from_pretrained(
             args.model_id,
             trust_remote_code=True,
             low_cpu_mem_usage=True,
-        )
+        ).to(args.device)
     else:
         print("CausalLM Model")
         if(args.model_id == "deepseek-ai/DeepSeek-Coder-V2-Lite-Base"):
@@ -54,14 +54,13 @@ def main(args):
             )  
 
         else: 
-            print("CausalLM Model")
             model = AutoModelForCausalLM.from_pretrained(
                 args.model_id,
                 trust_remote_code=True,
                 low_cpu_mem_usage=True,
-            )
+            ).to(args.device)
 
-    model.to(args.device)
+    #model.to(args.device)
     
     #Load hf-hosted dataset
     df = pd.read_csv(args.dataset_location)
@@ -70,10 +69,13 @@ def main(args):
 
     responses = []
 
+    from transformers import GenerationConfig
+    gen_config = GenerationConfig(max_new_tokens = 300)
+
     for i, row in enumerate(df.iterrows()):
-        formatted_prompt = row[1][args.prompt_column]
+        formatted_prompt = row[1].iloc[1]
         inputs = tokenizer.encode(formatted_prompt, return_tensors="pt").to(args.device)
-        outputs = model.generate(inputs, max_new_tokens=300)
+        outputs = model.generate(inputs, gen_config)
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         responses.append(response)
         print(f"Done with Example {i}")

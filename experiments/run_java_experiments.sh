@@ -21,11 +21,11 @@
 # done
 
 MODEL_IDS=(
-  "bigcode/starcoder2-3b"
-  "Salesforce/codet5p-2b"
-  "codellama/CodeLlama-7b-Instruct-hf"
+  #"bigcode/starcoder2-3b"
+  #"Salesforce/codet5p-2b"
+  #"codellama/CodeLlama-7b-Instruct-hf"
   "deepseek-ai/DeepSeek-Coder-V2-Lite-Base"
-  "Salesforce/codet5-base"
+  #"Salesforce/codet5-base"
   )
   
 DATASET_LOCATIONS=(
@@ -45,6 +45,6 @@ for MODEL_ID in "${MODEL_IDS[@]}"; do
             --dataset_location "$DATASET_LOCATION" \
             --max_new_tokens 300 \
             --prompt_output_dir "/media/mujtaba/DATA/nick/UnitTestExamples/data/results" \
-            --device "cuda:0"
+            --device "cuda:2" # Change back to: "cuda:0"
     done
 done
