@@ -45,6 +45,6 @@ for MODEL_ID in "${MODEL_IDS[@]}"; do
             --dataset_location "$DATASET_LOCATION" \
             --max_new_tokens 300 \
             --prompt_output_dir "/media/mujtaba/DATA/nick/UnitTestExamples/data/results" \
-            --device "cuda:2" # Change back to: "cuda:0"
+            --device "cuda:0" # "cuda:2" before
     done
 done

@@ -74,7 +74,7 @@ def main(args):
 
     for i, row in enumerate(df.iterrows()):
         formatted_prompt = row[1].iloc[1]
-        inputs = tokenizer.encode(formatted_prompt, return_tensors="pt").to(args.device)
+        inputs = tokenizer.encode(formatted_prompt, return_tensors="pt").to(args.device) 
         outputs = model.generate(inputs, gen_config)
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         responses.append(response)
